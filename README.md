@@ -1,10 +1,10 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`SISTEMAS PARA INTERNET`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de Aplicações Móveis`
 
-`SEMESTRE`
+`2023.1`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
