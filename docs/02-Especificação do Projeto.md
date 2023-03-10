@@ -112,16 +112,16 @@ Igualmente será inserido a possibilidade de edição e filtro dos dados inserid
 
 Modelo de cadastramento / edição de membros. Para a melhoria do processo de cadastramento é proposto realizar uma aplicação móvel que facilite o cadastramento dos membros já existentes e de novos membros, salvando os dados em um banco de dados, e permitindo a edição e exclusão, tornando todo o processo mais intuitivo e rápido, além de mais organizado.
 
-![Processo 1](img/PROCESSO 01.png)
+<img src="img/PROCESSO 01.png"/>
 
 ### Processo 2 – ORGANOGRAMA / AGENDA DE AULAS
 
 Modelo de criação da Agenda de Aulas. Para a melhoria do processo é proposto a realização de uma agenda / organograma ao qual possa ser inserido as informações das aulas, horários, alunos matriculados e os professores que estão ministrando cada disciplina.
-![Processo 2](img/PROCESSO 02.png)
+<img src="img/PROCESSO 02.png"/>
 
 ## Indicadores de Desempenho
 
-![Indicadores de Desempenho](img/Percentual de desempenho.png)
+<img src="img/Percentual de desempenho.png"/>
 
 ## Requisitos
 
@@ -155,28 +155,28 @@ Modelo de criação da Agenda de Aulas. Para a melhoria do processo é proposto 
 
 ## Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](img/Diagrama de Casos de Uso.png)
+<img src="img/Diagrama de Casos de Uso.png"/>
 
 # Matriz de Rastreabilidade
 
-![Matriz de rastreabilidade](img/Matriz de Rastreabilidade.png)
+<img src="img/Matriz de Rastreabilidade.png"/>
 
 # Gerenciamento de Projeto
 
 ## Gerenciamento de Tempo
 
-(img/Gerenciamento de Tempo 01.png)
+<img src="img/Gerenciamento de Tempo 01.png"/>
 
-(img/Gerenciamento de Tempo 02.png)
+<img src="img/Gerenciamento de Tempo 02.png"/>
 
-(img/Gerenciamento de Tempo 03.png)
+<img src="img/Gerenciamento de Tempo 03.png"/>
 
 ## Gerenciamento de Equipe
 
-(img/Gerenciamento de Equipe.png)
+<img src="img/Gerenciamento de Equipe.png"/>
 
 Gerenciamento de equipe ainda em andamento, membros ainda não foram definidos para cada atividade.
 
 ## Gestão de Orçamento
 
-(img/Gestão de Orçamento.png)
+<img src="img/Gestão de Orçamento.png"/>
