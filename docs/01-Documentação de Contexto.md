@@ -1,46 +1,44 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Para a realização do projeto final da disciplina de Projetos do curso Sistemas para Internet foi escolhido realizar a parceria com o Instituto Árvore da Vida.
+
+Há 13 anos, no Jardim Teresópolis, começou o cultivo de uma árvore. Como toda boa árvore, ela nasceu como um símbolo de vida e de transformação. Veio daí o seu nome: Árvore da Vida.
+
+Com a proposta de gerar oportunidades de desenvolvimento humano, social e cultural no Jardim Teresópolis, Betim, Minas Gerais, o Árvore da Vida surgiu como um programa de relacionamento da Fiat Automóveis, atual FCA. Desde sua criação, a iniciativa oferece atividades socioeducativas, fomenta a geração de emprego e renda e promove o fortalecimento da comunidade.
+
+Em 2017, seguindo um percurso de amadurecimento e protagonismo, o programa se transformou no “Instituto Árvore da Vida” – uma associação sem fins lucrativos composta e gerida por membros da própria comunidade e por pessoas que participaram do projeto durante toda a sua história.
+
+O Programa cresceu e transformou-se em um Instituto. Mantendo o mesmo desejo inicial, de buscar o desenvolvimento social do complexo Jardim Teresópolis, o Instituto dá continuidade aos projetos educacionais, culturais e comunitários já realizados e amplia ainda mais as possibilidades de desenvolvimento da iniciativa.
+
+As principais frentes de ação do IAV são a promoção da formação de crianças e adolescentes para atuarem como agentes multiplicadores em suas famílias e comunidades e o incentivo à participação e ao engajamento comunitário. 
+
+Após reuniões realizadas com o Instituto verificou-se algumas problemáticas a serem solucionadas por meio do desenvolvimento de uma aplicação mobile. Um dos principais problemas a nível de organização do Instituto é o cadastramento de novos membros. Atualmente todo o processo é feito por meio de excel o que dificulta na organização e na facilidade do preenchimento de todos os campos necessários. Além disso, outro problema discutido foi a organização das aulas e dos horários de cada professor relacionado com sua determinada aula. 
+
+Para solucionar as questões apresentadas pelo Instituto foi estabelecido o projeto de desenvolvimento de uma aplicação mobile a ser utilizada pelos administradores e funcionários do Instituto para realizar o cadastramento de novos membros de forma simples e intuitiva. Outra funcionalidade a ser implementada é a possibilidade de organizar um cronograma com todas as aulas realizadas pelo instituto com seu respectivo horário, dia, professor  e alunos matriculados solucionando assim as problemáticas apresentadas.
+
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Atualmente, os membros do Instituto Árvore da Vida deparam-se com a dificuldade em organizar e realizar o cadastro dos novos possíveis usuários dos serviços aos quais disponibiliza para a comunidade ao qual está inserida. Além disso, a organização das aulas disponíveis e dos horários de cada professor são igualmente problematizados.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Este projeto busca desenvolver uma aplicação mobile que contemple a possibilidade de realizar o cadastro de novos usuários de forma rápida e intuitiva, além de organizar os horários de aulas e professores do instituto.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Tem como objetivo específico:
+
+Permitir o cadastro de novos membros de forma simplificada para o usuário;
+Permitir que o usuário edite o cadastro de membros já existentes;
+Permitir que o usuário visualize e organize as aulas que estão sendo disponibilizadas pelo instituto, seus horários e que alunos estão cadastrados;
+Permitir  que o usuário visualize e organize os horários e as respectivas aulas dos professores do instituto.
+
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+O Instituto Árvore da Vida trabalha em prol do desenvolvimento social do complexo Jardim Teresópolis, em Betim. Suas principais frentes de ação são a promoção da formação de crianças e adolescentes e o incentivo à participação e ao engajamento  comunitário.   
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Baseado na importância das atividades desenvolvidas pelo Instituto Árvore da Vida,  justifica-se o presente projeto ao auxiliar e promover melhora no dia-a-dia de ações voltadas em garantir uma melhor qualidade de vida para as comunidades envolvidas.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Administradores e funcionários do Instituto Árvore da Vida que realizem cadastro de novos membros, editem o cadastro de membros existentes e editem informações sobre aulas e horários de professores.
