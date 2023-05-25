@@ -1,10 +1,95 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
+O processo de realização dos testes da solução desenvolvida está documentado na seção que se segue.
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
+<table>
+  <tr>
+    <th> Caso teste 1 </th>
+    <th> Login </th>
+  </tr>
+  
+ <tr>
+    <th> Requisitos associados </th>
+    <th> 
+      <li> [RF-000]	Permitir que o usuário realize login
+ </li>
+   </th>
+  </tr>
+  
+   <tr>
+  <th> Objetivo do Teste </th>
+   <th> Verificar se os usuários conseguem fazer o login. </th>
+  </tr>
+   
+</th>
+  </tr>
+  </table>
+  <table>
+  <tr>
+    <th> Caso teste 2 </th>
+    <th> Cadastro de novos alunos </th>
+  </tr>
+  
+ <tr>
+    <th> Requisitos associados </th>
+    <th> 
+      <li> [RF-001]	Permitir que o usuário cadastre novos membros </li>
+   </th>
+  </tr>
+  
+   <tr>
+  <th> Objetivo do Teste </th>
+   <th> Verificar se os usuários autorizados(administradores) conseguem fazer o cadastro de novos alunos. </th>
+  </tr>
+   
+</th>
+  </tr>
+</table>
 
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
+<table>
+  <tr>
+    <th> Caso teste 3 </th>
+    <th> Visualização e edição de cadastro de alunos </th>
+  </tr>
+  
+ <tr>
+    <th> Requisitos associados </th>
+    <th> 
+      <li> [RF-002]	Permitir que o usuário edite o cadastro de membros já existentes</li>
+     <li> [RF-003]	Permitir que o usuário visualize os cadastros existentes </li>
+   </th>
+  </tr>
+  
+   <tr>
+  <th> Objetivo do Teste </th>
+   <th> Verificar se os usuários autorizados(administradores) conseguem visualizar e editar o cadastro de membros já existentes. </th>
+  </tr>
+   
+</th>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th> Caso teste 4 </th>
+    <th> Cadastro de novas classes. </th>
+  </tr>
+  
+ <tr>
+    <th> Requisitos associados </th>
+    <th> 
+     <li> [RF-004]	Permitir que o usuário cadastre novas classes </li>
+   </th>
+  </tr>
+  
+   <tr>
+  <th> Objetivo do Teste </th>
+   <th> Verificar se os professores conseguem fazer o cadastro de novas classes. </th>
+  </tr>
+   
+</th>
+  </tr>
+</table>
  
 ## Ferramentas de Testes (Opcional)
 
