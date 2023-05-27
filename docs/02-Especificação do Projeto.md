@@ -95,7 +95,13 @@
 
 ### Análise da Situação Atual
 
-Atualmente os problemas a serem solucionados são a realização de forma mais rápida e intuitiva do cadastro de novos membros do Instituto Árvore da Vida e a organização das aulas disponibilizadas e suas informações. Atualmente todas as informações são inseridas e armazenadas em excel, o que dificulta as operações do Instituto Árvore da Vida. 
+Atualmente o Instituto Árvore da Vida armazena dois importantes dados organizacionais, informações das aulas e dos alunos, em planilhas do Excel. E com o crescimento do Instituto, algumas dificuldades e preocupações aparecem em relação a este armazenamento. 
+
+Por exemplo, ao cadastrar um aluno, a psicóloga responsável pela matrícula recolhe as informações do aluno manualmente e depois transfere para a planilha do Excel. Esse processo não é só demorado, mas como também deixa muito espaço para erros.  
+
+Outro exemplo é o controle das aulas, atualmente o Instituo não possui uma ferramenta para o controle das aulas e com a expansão da oferta de cursos, a necessidade para uma organização cresce. 
+
+Em conclusão, para as crescentes necessidades do Instituto Árvore da Vida o armazenamento em planilhas do Excel não está sendo eficiente nem satisfatório. 
 
 ![Cadastro BPMN_page-0001](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/assets/81269914/434dd388-e85f-4498-86cb-80c1396f3394)
 
