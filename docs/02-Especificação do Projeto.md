@@ -158,6 +158,11 @@ Modelo de criação da Agenda de Aulas. Para a melhoria do processo é proposto 
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
 
+### Priorização dos requisitos
+Abaixo segue a priorização dos requisitos usando a técnica MoSCoW (Must have, Should have, Could have and Won’t have):
+
+![Diagramas  - Página 6](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/assets/81269914/153d2c95-b9cc-44b1-979b-8f19b8cd82c6)
+
 ## Restrições
 
 |ID| Restrição                                             |
