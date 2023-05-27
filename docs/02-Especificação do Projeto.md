@@ -97,6 +97,9 @@
 
 Atualmente os problemas a serem solucionados são a realização de forma mais rápida e intuitiva do cadastro de novos membros do Instituto Árvore da Vida e a organização das aulas disponibilizadas e suas informações. Atualmente todas as informações são inseridas e armazenadas em excel, o que dificulta as operações do Instituto Árvore da Vida. 
 
+![Cadastro BPMN_page-0001](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/assets/81269914/434dd388-e85f-4498-86cb-80c1396f3394)
+
+### Análise da Situação Futura
 ### Descrição Geral da Proposta
 
 Para melhorar os processos realizados pelo Instituto Árvore da Vida é proposto realizar uma aplicação móvel que facilite o cadastramento dos membros já existentes e de novos membros, salvando os dados em um banco de dados, e permitindo a edição e exclusão, tornando todo o processo mais intuitivo e rápido, além de mais organizado.
@@ -112,16 +115,21 @@ Igualmente será inserido a possibilidade de edição e filtro dos dados inserid
 
 Modelo de cadastramento / edição de membros. Para a melhoria do processo de cadastramento é proposto realizar uma aplicação móvel que facilite o cadastramento dos membros já existentes e de novos membros, salvando os dados em um banco de dados, e permitindo a edição e exclusão, tornando todo o processo mais intuitivo e rápido, além de mais organizado.
 
-<img src="img/PROCESSO 01.png"/>
+
+![ADM BPMN_page-0001](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/assets/81269914/fd047f29-fd50-4959-959f-3c37a31db352)
+
 
 ### Processo 2 – ORGANOGRAMA / AGENDA DE AULAS
 
 Modelo de criação da Agenda de Aulas. Para a melhoria do processo é proposto a realização de uma agenda / organograma ao qual possa ser inserido as informações das aulas, horários, alunos matriculados e os professores que estão ministrando cada disciplina.
-<img src="img/PROCESSO 02.png"/>
+
+![Aulas BPMN_page-0001](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/assets/81269914/eeab3e57-807f-44b0-a8af-8b91b1f76301)
+
 
 ## Indicadores de Desempenho
 
 <img src="img/Percentual de desempenho.png"/>
+
 
 ## Requisitos
 
