@@ -134,7 +134,8 @@ Modelo de criação da Agenda de Aulas. Para a melhoria do processo é proposto 
 
 ## Indicadores de Desempenho
 
-<img src="img/Percentual de desempenho.png"/>
+
+![Grades_page-0001](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/assets/81269914/05cbd1e5-6dbc-4e96-8422-1c18c7862666)
 
 
 ## Requisitos
