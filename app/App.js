@@ -27,7 +27,7 @@ export default function App() {
           name="Login"
           component={Login}
           options={{
-            headerTintColor: '#F79031'
+            headerTintColor: '#FFFFFF'
           }}
         />
         <Stack.Screen
@@ -45,7 +45,7 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name="HomeProf"
+          name="Home Professor"
           component={HomeProf}
           options={{
             headerTintColor: '#F79031'

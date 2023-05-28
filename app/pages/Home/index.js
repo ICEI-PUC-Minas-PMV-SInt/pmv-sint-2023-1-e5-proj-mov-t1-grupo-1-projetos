@@ -6,6 +6,7 @@ import styles from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { signOut } from 'firebase/auth';
 import { authentication } from '../../components/config';
+import { AntDesign } from '@expo/vector-icons';
 
 export default function Home({ navigation }) {
 
@@ -20,62 +21,60 @@ export default function Home({ navigation }) {
     return (
         <View style={styles.container} >
             <ScrollView>
+                <View style={styles.row}>
+                    {/*Botão para cadastrar novo professor*/}
+                    <TouchableOpacity
+                        style={styles.button1}
+                        onPress={() => navigation.navigate("Cadastro")}>
+                        <AntDesign name="addfile" size={24} color="white" />
+                        <Text style={styles.button}>Cadastrar Professor</Text>
+                    </TouchableOpacity>
 
-                {/*Botão para cadastrar novo professor*/}
-                <TouchableOpacity
-                    style={styles.buttonNewTask}
-                    onPress={() => navigation.navigate("Cadastro")}>
-                    <Text style={styles.button}>Cadastrar Professor</Text>
-                </TouchableOpacity>
+                    {/*Botão para cadastrar novo aluno*/}
+                    <TouchableOpacity
+                        style={styles.button2}
+                        onPress={() => { navigation.navigate("Main") }}>
+                        <AntDesign name="addfile" size={24} color="white" />
+                        <Text style={styles.button}>Cadastrar Educando</Text>
+                    </TouchableOpacity>
+                </View>
 
-                {/*Botão para cadastrar novo aluno*/}
-                <TouchableOpacity
-                    style={styles.buttonNewTask}
-                    onPress={() => { navigation.navigate("Main") }}>
-                    <Text style={styles.button}>Cadastrar Educando</Text>
-                </TouchableOpacity>
+                <View style={styles.row}>
+                    {/*Botão para ver alunos cadastrados*/}
+                    <TouchableOpacity
+                        style={styles.button3}
+                        onPress={() => { navigation.navigate("DadosEducando") }}>
+                        <AntDesign name="folder1" size={24} color="white" />
+                        <Text style={styles.button}>Educandos Cadastrados</Text>
+                    </TouchableOpacity>
 
-                {/*Botão para ver alunos cadastrados*/}
-                <TouchableOpacity
-                    style={styles.buttonNewTask}
-                    onPress={() => { navigation.navigate("DadosEducando") }}>
-                    <Text style={styles.button}>Educandos Cadastrados</Text>
-                </TouchableOpacity>
+                    {/*Botão para cadastrar nova atividade*/}
+                    <TouchableOpacity
+                        style={styles.button4}
+                        onPress={() => { navigation.navigate("CadastroAtividade") }}>
+                        <AntDesign name="filetext1" size={24} color="white" />
+                        <Text style={styles.button}>Cadastrar Atividade</Text>
+                    </TouchableOpacity>
+                </View>
 
-                {/*Botão para cadastrar nova atividade*/}
-                <TouchableOpacity
-                    style={styles.buttonNewTask}
-                    onPress={() => { navigation.navigate("CadastroAtividade") }}>
-                    <Text style={styles.button}>Cadastrar Atividade</Text>
-                </TouchableOpacity>
-
-                {/*Botão para ver atividades cadastradas*/}
-                <TouchableOpacity
-                    style={styles.buttonNewTask}
-                    onPress={() => { navigation.navigate("DadosAtividade") }}>
-                    <Text style={styles.button}>Atividades Cadastradas</Text>
-                </TouchableOpacity>
-
-                {/*Botão para cadastrar nova turma*/}
-                <TouchableOpacity
-                    style={styles.buttonNewTask}
-                    onPress={() => { navigation.navigate("CadastroTurma") }}>
-                    <Text style={styles.button}>Cadastrar Turma</Text>
-                </TouchableOpacity>
-
-                {/*Botão para ver turmas cadastradas*/}
-                <TouchableOpacity
-                    style={styles.buttonNewTask}
-                    onPress={() => { navigation.navigate("DadosTurma") }}>
-                    <Text style={styles.button}>Turmas Cadastradas</Text>
-                </TouchableOpacity>
+                <View style={styles.row}>
+                    {/*Botão para ver atividades cadastradas*/}
+                    <TouchableOpacity
+                        style={styles.button5}
+                        onPress={() => { navigation.navigate("DadosAtividade") }}>
+                        <AntDesign name="folder1" size={24} color="white" />
+                        <Text style={styles.button}>Atividades Cadastradas</Text>
+                    </TouchableOpacity>
+                    </View>
 
                 {/*Fazer Logout*/}
+                <View style={styles.rowFinal}>
                 <TouchableOpacity
                     style={styles.buttonLink}
                     onPress={signOutFunction}>
-                    <Text style={styles.button}>Logout</Text>
+                    <Text style={styles.link}>Logout</Text>
                 </TouchableOpacity>
+                </View>
             </ScrollView>
         </View>
 

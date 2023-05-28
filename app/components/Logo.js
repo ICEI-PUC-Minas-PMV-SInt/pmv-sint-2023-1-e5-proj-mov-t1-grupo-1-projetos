@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
  image:{
     width: 128,
     height: 128,
-    borderRadius: 30
+    borderRadius: 0
   },
 });
 

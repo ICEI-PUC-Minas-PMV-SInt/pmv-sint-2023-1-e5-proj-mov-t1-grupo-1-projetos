@@ -6,6 +6,7 @@ import styles from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { signOut } from 'firebase/auth';
 import { authentication } from '../../components/config';
+import { AntDesign } from '@expo/vector-icons';
 
 export default function HomeProf({ navigation }) {
 
@@ -21,12 +22,23 @@ export default function HomeProf({ navigation }) {
 
     return (
         <View style={styles.container} >
-            {/*Botão para cadastrar email*/}
-            <TouchableOpacity
-                style={styles.buttonNewTask}
-                onPress={() => { navigation.navigate("NovaTurma") }}>
-                <Text style={styles.button}>Cadastrar Nova Turma</Text>
-            </TouchableOpacity>
+
+            <View style={styles.row}>
+                {/*Botão para cadastrar nova turma*/}
+                <TouchableOpacity
+                    style={styles.button1}
+                    onPress={() => { navigation.navigate("CadastroTurma") }}>
+                    <AntDesign name="filetext1" size={24} color="white" />
+                    <Text style={styles.button}>Cadastrar Turma</Text>
+                </TouchableOpacity>
+                {/*Botão para ver turmas cadastradas*/}
+                <TouchableOpacity
+                    style={styles.button3}
+                    onPress={() => { navigation.navigate("DadosTurma") }}>
+                        <AntDesign name="folder1" size={24} color="white" /> 
+                    <Text style={styles.button}>Turmas Cadastradas</Text>
+                </TouchableOpacity>
+            </View>
 
             {/*Botão para ver os horários*/}
             <TouchableOpacity

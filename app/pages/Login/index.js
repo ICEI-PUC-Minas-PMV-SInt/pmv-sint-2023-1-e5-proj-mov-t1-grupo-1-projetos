@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TextInput, Alert, ScrollView } from "react-native";
 import React, { useState } from 'react'
-import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { sendPasswordResetEmail, signInWithEmailAndPassword } from "firebase/auth";
 import { authentication } from "../../components/config";
 
 import styles from './style';
@@ -20,7 +20,11 @@ export default function Login({ navigation }) {
             .then(() => {
                 Alert.alert("Email enviado")
             }).catch((error) => {
-                Alert.alert(error)
+                if(error.message == 'Firebase: Error (auth/missing-email).') {
+                    Alert.alert('Preencha o campo de email antes de clicar')
+                } else{
+                Alert.alert('Erro:', error.message)
+                }
             })
     }
 
@@ -33,7 +37,7 @@ export default function Login({ navigation }) {
                     navigation.navigate("Home")
                 } else {
                     console.log("Login feito com sucesso")
-                    navigation.navigate("HomeProf")
+                    navigation.navigate("Home Professor")
                 }
             })
             .catch((error) => {
@@ -44,8 +48,8 @@ export default function Login({ navigation }) {
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
-            <Logo />
-            <Text style={styles.title}>Faça o seu Login</Text>
+            <Logo style={styles.logo}/>
+            <Text style={styles.title}>Login</Text>
             {/*Input Email*/}
             <TextInput placeholder="Email"
                 style={styles.input}
@@ -54,18 +58,20 @@ export default function Login({ navigation }) {
                 keyboardType="email-address" />
 
             {/*Input Senha*/}
-            <TextInput placeholder="password"
+            <TextInput placeholder="Senha"
                 style={styles.input}
                 onChangeText={(password) => { setPassword(password) }}
                 secureTextEntry={true}
                 minLength={6} />
 
             {/*Enviar email para redefinir senha*/}
+            <View style={styles.row}>
             <TouchableOpacity
                 onPress={forgotPassword}
                 style={styles.buttonLink}>
                 <Text style={styles.link}>Esqueci senha</Text>
             </TouchableOpacity>
+            </View>
 
             {/*Entrar*/}
             <TouchableOpacity

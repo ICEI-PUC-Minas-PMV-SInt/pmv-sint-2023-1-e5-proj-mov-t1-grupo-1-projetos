@@ -180,6 +180,7 @@ export default function CadastroTurma({ navigation }) {
                 renderItem={renderizarAluno}
                 keyExtractor={(item) => item}
                 style={styles.listaAlunos}
+                scrollEnabled={false}
             />
 
             {/* Professor*/}
