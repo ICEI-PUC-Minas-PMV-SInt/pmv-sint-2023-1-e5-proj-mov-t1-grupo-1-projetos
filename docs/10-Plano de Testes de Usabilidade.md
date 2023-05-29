@@ -150,7 +150,7 @@ Os testes serão feitos com:
 	</tr>
 	<tr>
 		<td>CT 11</td>
-		<td>(Administrador) Fazer cadastro de nova turma</td>
+		<td>(Professor) Fazer cadastro de nova turma</td>
 		<td>
 			<ul>
 				<li>Na tela inicial, clicar na opção "Cadastrar Turma"</li>
@@ -161,7 +161,7 @@ Os testes serão feitos com:
 	</tr>
 	<tr>
 		<td>CT 12</td>
-		<td>(Administrador)  Filtrar uma ficha de uma turma específica</td>
+		<td>(Professor)  Filtrar uma ficha de uma turma específica</td>
 		<td>
 			<ul>
 				<li> Na tela inicial, clicar na opção "Turmas Cadastradas"</li>
@@ -173,7 +173,7 @@ Os testes serão feitos com:
 	</tr>
 	<tr>
 		<td>CT 13</td>
-		<td>(Administrador)  Editar a ficha de uma turma específica</td>
+		<td>(Professor)  Editar a ficha de uma turma específica</td>
 		<td>
 			<ul>
 				<li> Na tela inicial, clicar na opção "Turmas Cadastradas"</li>
@@ -186,7 +186,7 @@ Os testes serão feitos com:
 	</tr>
 	<tr>
 		<td>CT 14</td>
-		<td>(Administrador)  Deletar a ficha de uma turma específica</td>
+		<td>(Professor)  Deletar a ficha de uma turma específica</td>
 		<td>
 			<ul>
 				<li> Na tela inicial, clicar na opção "Turmas Cadastradas"</li>
