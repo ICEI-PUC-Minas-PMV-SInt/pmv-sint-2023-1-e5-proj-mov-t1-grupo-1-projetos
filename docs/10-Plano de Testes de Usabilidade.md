@@ -115,7 +115,7 @@ Os testes serão feitos com:
 		<td>(Administrador)  Filtrar uma ficha de uma atividade específica</td>
 		<td>
 			<ul>
-				<li> Na tela inicial, clicar na opção "Atividades cadastradas"</li>
+				<li> Na tela inicial, clicar na opção "Atividades Cadastradas"</li>
 				<li>Escrever nome da atividade no mecanismo de pesquisa </li>
 				<li>Vizualizar ficha da atividade</li>
 			</ul>
