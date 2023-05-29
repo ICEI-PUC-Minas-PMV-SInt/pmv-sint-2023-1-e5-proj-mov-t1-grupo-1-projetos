@@ -195,7 +195,14 @@ Abaixo segue a priorização dos requisitos usando a técnica MoSCoW (Must have,
 
 <img src="img/Gerenciamento de Equipe.png"/>
 
-Gerenciamento de equipe ainda em andamento, membros ainda não foram definidos para cada atividade.
+Gerenciamento de equipe:
+ - Todos os membros do time: Atividade 01 - Realizar reuniões com o usuário da aplicação
+ - Thais Helena: Atividade 05 - Desenvolver as interfaces front-end da aplicação
+ - Paulo Henrique Moura Da Silva: Atividade 02 - Preparar documentação
+ - Déborah Freitas de Souza: Atividade 03 - Desenvolver o back-end e banco de dados
+ - Iara Camargo de Oliveira: Atividade 02 - Preparar documentação
+ - Yuri Ribeiro Felipe: Atividade 02 - Preparar documentação
+ - Todos os membros do time: Atividade 06 - Realizar a entrega do projeto
 
 ## Gestão de Orçamento
 
