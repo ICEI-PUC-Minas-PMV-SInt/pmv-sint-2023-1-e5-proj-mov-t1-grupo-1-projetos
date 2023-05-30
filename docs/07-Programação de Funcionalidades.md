@@ -60,8 +60,8 @@ Foram desenvolvidas as seguintes funcionalidades:
 		<td>Permitir que o usuário edite o cadastro de classes já existentes</td>
 		<td>
 			<ul>
-				<li><a href=https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/DadosAtividade/index.js >Atividades</a></li>
-				<li><a href=https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/Turmas/index.js >Turmas</a></li>
+				<li><a href=https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/UpdateAtividade/index.js >Atividades</a></li>
+				<li><a href=https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/UpdateTurma/index.js >Turmas</a></li>
 			</ul>
 		</td>
   </tr>
