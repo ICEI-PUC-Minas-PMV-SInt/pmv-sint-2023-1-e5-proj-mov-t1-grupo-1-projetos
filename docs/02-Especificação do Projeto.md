@@ -134,7 +134,8 @@ Modelo de criação da Agenda de Aulas. Para a melhoria do processo é proposto 
 
 ## Indicadores de Desempenho
 
-<img src="img/Percentual de desempenho.png"/>
+
+![Grades_page-0001](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/assets/81269914/05cbd1e5-6dbc-4e96-8422-1c18c7862666)
 
 
 ## Requisitos
@@ -194,7 +195,14 @@ Abaixo segue a priorização dos requisitos usando a técnica MoSCoW (Must have,
 
 <img src="img/Gerenciamento de Equipe.png"/>
 
-Gerenciamento de equipe ainda em andamento, membros ainda não foram definidos para cada atividade.
+Gerenciamento de equipe:
+ - Todos os membros do time: Atividade 01 - Realizar reuniões com o usuário da aplicação
+ - Thais Helena: Atividade 05 - Desenvolver as interfaces front-end da aplicação
+ - Paulo Henrique Moura Da Silva: Atividade 02 - Preparar documentação
+ - Déborah Freitas de Souza: Atividade 03 - Desenvolver o back-end e banco de dados
+ - Iara Camargo de Oliveira: Atividade 02 - Preparar documentação
+ - Yuri Ribeiro Felipe: Atividade 02 - Preparar documentação
+ - Todos os membros do time: Atividade 06 - Realizar a entrega do projeto
 
 ## Gestão de Orçamento
 

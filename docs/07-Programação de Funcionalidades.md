@@ -1,15 +1,80 @@
 # Programação de Funcionalidades
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
+Foram desenvolvidas as seguintes funcionalidades:
 
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Requisito</th>
+    <th>Funcionalidade</th>
+	</tr>
+	<tr>
+		<td>RF-000</td>
+		<td>Permitir que o usuário realize login</td>
+		<td>
+			<ul>
+				<li><a href= https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/Login/index.js >Login<a/></li>
+			</ul>
+		</td>
+  </tr>
+  <tr>
+		<td>RF-001</td>
+		<td>Permitir que o usuário cadastre novos membros</td>
+		<td>
+			<ul>
+	<li><a href=https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/Main/index.js  >Alunos<a/></li>
+					<li><a href= https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/Cadastro/index.js >Professores<a/></li>
+			</ul>
+		</td>
+  </tr>
+  <tr>
+		<td>RF-002</td>
+		<td>Permitir que o usuário edite o cadastro de membros já existentes</td>
+		<td>
+			<ul>
+				<li><a href= https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/Update/index.js>Editar cadastros</a></li>
+			</ul>
+		</td>
+  </tr>
+  <tr>
+		<td>RF-003</td>
+		<td>Permitir que o usuário visualize os cadastros existentes</td>
+		<td>
+			<ul>
+				<li><a href= https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/Details/index.js >Visualizar cadastros</a></li>
+			</ul>
+		</td>
+  </tr>
+  <tr>
+		<td>RF-004</td>
+		<td>Permitir que o usuário cadastre novas classes</td>
+		<td>
+			<ul>
+				<li><a href= https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/CadastroAtividade/index.js >Atividades</a></li>
+				<li><a href= https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/CadastroTurma/index.js  >Turmas</a></li>
+			</ul>
+		</td>
+  </tr>
+  <tr>
+		<td>RF-005</td>
+		<td>Permitir que o usuário edite o cadastro de classes já existentes</td>
+		<td>
+			<ul>
+				<li><a href=https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/UpdateAtividade/index.js >Atividades</a></li>
+				<li><a href=https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/UpdateTurma/index.js >Turmas</a></li>
+			</ul>
+		</td>
+  </tr>
+  <tr>
+		<td>RF-006</td>
+		<td>Permitir que o usuário visualize as classes existentes</td>
+		<td>
+			<ul>
+					<li><a href=https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/Atividades/index.js >Atividades</a></li>
+				<li><a href=https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e5-proj-mov-t1-grupo-1-projetos/blob/main/app/pages/Turmas/index.js >Turmas</a></li>
+			</ul>
+		</td>
+  </tr>
+	
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
