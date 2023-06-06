@@ -5,7 +5,7 @@ import { authentication } from "../../components/config";
 
 import styles from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import Logo from "../../components/Logo";
+import Logo from "../../components/Logo2";
 
 
 export default function Cadastro({ navigation }) {
@@ -30,7 +30,8 @@ export default function Cadastro({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Crie o Login do professor</Text>
+            <Logo style={styles.logo}/>
+            <Text style={styles.title}>Criar Login Para Professor</Text>
             <TextInput placeholder="Email"
                 style={styles.input}
                 onChangeText={(email) => { setEmail(email) }}

@@ -17,6 +17,10 @@ import CadastroTurma from "./pages/CadastroTurma";
 import Turmas from "./pages/Turmas";
 import UpdateTurma from "./pages/UpdateTurma";
 import DadosTurma from "./pages/DadosTurma";
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs();//Ignore all log notifications
+
 const Stack = createStackNavigator();
 
 export default function App() {

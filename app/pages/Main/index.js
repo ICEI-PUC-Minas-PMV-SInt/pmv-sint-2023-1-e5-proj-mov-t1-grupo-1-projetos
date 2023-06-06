@@ -6,7 +6,7 @@ import styles from './style'
 import { TextInputMask } from 'react-native-masked-text'
 import { addDoc, collection } from "firebase/firestore";
 
-export default function Main({navigation}) {
+export default function Main({ navigation }) {
 
     const [dataEntrada, setDataEntrada] = useState('')
     const [dataSaida, setDataSaida] = useState('')
@@ -86,9 +86,27 @@ export default function Main({navigation}) {
     }
 
 
+
+
+
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.label}>Formulário do Educando</Text>
+
+            {/* Nome*/}
+            <TextInput
+                style={styles.input}
+                placeholder='Nome'
+                onChangeText={(nome) => { setNome(nome) }}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
+            />
+            <Text style={styles.obrigatorio}>*obrigatório</Text>
+
 
             {/* Data de Entrada */}
             <TextInput
@@ -96,6 +114,12 @@ export default function Main({navigation}) {
                 style={styles.input}
                 placeholder={'dd/mm/aaaa'}
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(dataEntrada) => { setDataEntrada(dataEntrada) }}
                 render={(props) => (
                     <TextInputMask
@@ -115,6 +139,12 @@ export default function Main({navigation}) {
                 style={styles.input}
                 placeholder={'dd/mm/aaaa'}
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(dataSaida) => { setDataSaida(dataSaida) }}
                 render={(props) => (
                     <TextInputMask
@@ -127,13 +157,6 @@ export default function Main({navigation}) {
                 )}
             />
 
-            {/* Nome*/}
-            <TextInput
-                style={styles.input}
-                placeholder='Nome'
-                onChangeText={(nome) => { setNome(nome) }}
-            />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
 
             {/* Fone */}
             <TextInput
@@ -141,6 +164,12 @@ export default function Main({navigation}) {
                 style={styles.input}
                 placeholder={'(99) 9999-9999 ou (99) 99999-9999'}
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(fone) => { setFone(fone) }}
                 render={(props) => (
                     <TextInputMask
@@ -162,6 +191,12 @@ export default function Main({navigation}) {
                 style={styles.input}
                 placeholder={'dd/mm/aaaa'}
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(nascimento) => { setNascimento(nascimento) }}
                 render={(props) => (
                     <TextInputMask
@@ -179,6 +214,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 placeholder='Sexo'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(sexo) => { setSexo(sexo) }}
             />
             <Text style={styles.obrigatorio}>*obrigatório</Text>
@@ -187,6 +228,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 placeholder='RG'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 keyboardType="numeric"
                 onChangeText={(rg) => { setRg(rg) }}
             />
@@ -197,6 +244,12 @@ export default function Main({navigation}) {
                 style={styles.input}
                 placeholder='CPF'
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(cpf) => { setCpf(cpf) }}
                 render={(props) => <TextInputMask {...props} type={'cpf'} />}
             />
@@ -207,6 +260,12 @@ export default function Main({navigation}) {
                 style={styles.input}
                 placeholder='Certidão de Nascimento'
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(certidao) => { setCertidao(certidao) }}
             />
 
@@ -214,6 +273,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 placeholder='Etnia/Cor'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(etnia) => { setEtnia(etnia) }}
             />
             <Text style={styles.obrigatorio}>*obrigatório</Text>
@@ -222,6 +287,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 placeholder='Naturalidade'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(naturalidade) => { setNaturalidade(naturalidade) }}
             />
             <Text style={styles.obrigatorio}>*obrigatório</Text>
@@ -231,10 +302,16 @@ export default function Main({navigation}) {
                 label="Pessoa com Deficência?"
                 style={styles.input}
                 onChangeText={(pcd) => { setPcd(pcd) }}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 render={(props) => (
                     <Checkbox.Item
                         {...props}
-                        onPress={()=> {setPcd(!pcd)}}
+                        onPress={() => { setPcd(!pcd) }}
                         status={pcd ? 'checked' : 'unchecked'}
                     />
                 )}
@@ -243,16 +320,22 @@ export default function Main({navigation}) {
 
 
             {/*FORM */}
-            <Text style={styles.label}>Formulário da FamÍlia</Text>
+            <Text style={styles.label}>Formulário da Família</Text>
             {/* Possui Irmãos*/}
             <TextInput
-                label="Possui Irmãos Membros do Instituto?"
+                label="Irmãos Membros do Instituto?"
                 style={styles.input2}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(irmaos) => { setIrmaos(irmaos) }}
                 render={(props) => (
                     <Checkbox.Item
                         {...props}
-                        onPress={()=> {setIrmaos(!irmaos)}}
+                        onPress={() => { setIrmaos(!irmaos) }}
                         status={irmaos ? 'checked' : 'unchecked'}
                     />
                 )}
@@ -271,6 +354,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 label='Principal Responável Finaceiro'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(responsavelFin) => { setResponsavelFin(responsavelFin) }}
             />
 
@@ -279,6 +368,12 @@ export default function Main({navigation}) {
                 style={styles.input}
                 label='Quantidade de Membros'
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 placeholder={'Incluindo o Educando'}
                 onChangeText={(qtdMembros) => { setQtdMembros(qtdMembros) }}
             />
@@ -288,6 +383,12 @@ export default function Main({navigation}) {
                 style={styles.input}
                 label='Renda Familiar'
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 placeholder={'Per Capita'}
                 onChangeText={(renda) => { setRenda(renda) }}
                 render={(props) => (
@@ -310,6 +411,12 @@ export default function Main({navigation}) {
             {/* Rua*/}
             <TextInput
                 style={styles.input}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 label="Rua"
                 onChangeText={(rua) => { setRua(rua) }}
             />
@@ -318,6 +425,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 placeholder='Beco'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(beco) => { setBeco(beco) }}
             />
 
@@ -326,6 +439,12 @@ export default function Main({navigation}) {
                 style={styles.input}
                 label="Número"
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(numero) => { setNumero(numero) }}
             />
 
@@ -333,6 +452,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 label="Bairro"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(bairro) => { setBairro(bairro) }}
             />
 
@@ -340,6 +465,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 label="Tipo de Residência "
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(residencia) => { setResidencia(residencia) }}
                 placeholder={'Alugada / Própria / Cedida / Outros'}
             />
@@ -353,6 +484,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 label="Nome da Escola"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(escola) => { setEscola(escola) }}
             />
 
@@ -360,6 +497,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 label="Ano Escolar"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(anoEscolar) => { setAnoEscolar(anoEscolar) }}
             />
 
@@ -367,6 +510,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 label="Sala/Turma"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(salaTurma) => { setSalaTurma(salaTurma) }}
             />
 
@@ -374,6 +523,12 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 label="Turno"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(turno) => { setTurno(turno) }}
             />
 
@@ -386,6 +541,12 @@ export default function Main({navigation}) {
                 style={styles.input}
                 label="RG"
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(rgResponsavel) => { setRgResponsavel(rgResponsavel) }}
             />
 
@@ -394,6 +555,12 @@ export default function Main({navigation}) {
                 style={styles.input}
                 label="CPF"
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(cpfResponsavel) => { setCpfResponsavel(cpfResponsavel) }}
                 render={(props) => <TextInputMask {...props} type={'cpf'} />}
             />
@@ -407,11 +574,17 @@ export default function Main({navigation}) {
             <TextInput
                 style={styles.input}
                 label="Oficina Musical"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(ofcMusical) => { setOfcMusical(ofcMusical) }}
                 render={(props) => (
                     <Checkbox.Item
                         {...props}
-                        onPress={()=> {setOfcMusical(!ofcMusical)}}
+                        onPress={() => { setOfcMusical(!ofcMusical) }}
                         status={ofcMusical ? 'checked' : 'unchecked'}
                     />
                 )}
@@ -422,10 +595,16 @@ export default function Main({navigation}) {
                 style={styles.input}
                 label="Oficina de Formação Humana"
                 onChangeText={(ofcHumana) => { setOfcHumana(ofcMusical) }}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 render={(props) => (
                     <Checkbox.Item
                         {...props}
-                        onPress={()=> {setOfcHumana(!ofcHumana)}}
+                        onPress={() => { setOfcHumana(!ofcHumana) }}
                         status={ofcHumana ? 'checked' : 'unchecked'}
                     />
                 )}
@@ -439,10 +618,16 @@ export default function Main({navigation}) {
                 style={styles.input}
                 label="Internet"
                 onChangeText={(internet) => { setInternet(internet) }}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 render={(props) => (
                     <Checkbox.Item
                         {...props}
-                        onPress={()=> {setInternet(!internet)}}
+                        onPress={() => { setInternet(!internet) }}
                         status={internet ? 'checked' : 'unchecked'}
                     />
                 )}
@@ -453,10 +638,16 @@ export default function Main({navigation}) {
                 style={styles.input}
                 label="Dispositivo para Aulas Online"
                 onChangeText={(aparelho) => { setAparelho(aparelho) }}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 render={(props) => (
                     <Checkbox.Item
                         {...props}
-                        onPress={()=> {setAparelho(!aparelho)}}
+                        onPress={() => { setAparelho(!aparelho) }}
                         status={aparelho ? 'checked' : 'unchecked'}
                     />
                 )}

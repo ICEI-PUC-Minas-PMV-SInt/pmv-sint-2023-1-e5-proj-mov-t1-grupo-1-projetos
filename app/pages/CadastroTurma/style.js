@@ -3,30 +3,32 @@ import { StyleSheet } from "react-native"
 const styles = StyleSheet.create({
     label: {
         width: "90%",
-        marginTop: 20,
+        marginTop: 40,
         marginLeft: 20,
         fontSize: 24,
         fontWeight: 'bold',
         color: 'black',
+        textDecorationLine: 'underline 1px solid'
     },
     container: {
         flex: 1,
-
+        backgroundColor: '#ffffff',
     },
     input: {
         marginLeft: 20,
         width: "90%",
         marginTop: 20,
-        padding: 10,
+        padding: 5,
         height: 50,
-        backgroundColor:'#fff',
+        backgroundColor:'white',
         fontSize: 15,
+        borderBottomColor: 'pink'
     },
     input2: {
         marginLeft: 20,
-        width: "90%",
+        width: "80%",
         marginTop: 20,
-        padding: 10,
+        padding: 5,
         height: 50,
         backgroundColor:'#fff',
         fontSize: 14,
@@ -34,18 +36,26 @@ const styles = StyleSheet.create({
     obrigatorio: {
         marginLeft: 20,
         fontSize: 12,
-
+        marginTop: 5
     },
     buttonNext: {
-        width: "90%",
-        height: 60,
-        backgroundColor: 'orange',
+        padding: 15,
+        backgroundColor: '#F98A4B',
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginTop: 15,
-        borderRadius: 5,
-        justifyContent: 'center',
-        alignItems: 'center'
+        width: 200,
+        textAlign: 'center',
+        borderRadius: 50,
+        color: 'white',
+        fontSize: 16,
+        textTransform: 'uppercase',
+        marginTop: 40,
+        flex: 1,
+        marginBottom: 20
+    },
+    iconButton: {
+        flex: 1,
+        textAlign: 'center'
     }
 })
 

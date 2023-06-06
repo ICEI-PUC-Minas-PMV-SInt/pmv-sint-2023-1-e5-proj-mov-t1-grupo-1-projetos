@@ -24,6 +24,7 @@ export default function Details({ navigation, route }) {
         fetchQuery()
     }, [idTask])
 
+    //if oficina == true text='sim'
 
     return (
         <ScrollView style={styles.container}>
