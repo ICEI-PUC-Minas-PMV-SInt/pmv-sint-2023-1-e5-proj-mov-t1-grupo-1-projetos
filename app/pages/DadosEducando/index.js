@@ -105,7 +105,7 @@ export default function DadosEducando({ navigation }) {
               <Text
                 style={styles.DescriptionTask}
                 onPress={() =>
-                  navigation.navigate("Details", {
+                  navigation.navigate("Detalhes", {
                     id: item.id,
                   })
                 }

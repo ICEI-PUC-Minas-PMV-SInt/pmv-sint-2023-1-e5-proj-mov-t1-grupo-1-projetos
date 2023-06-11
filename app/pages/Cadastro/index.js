@@ -14,35 +14,40 @@ export default function Cadastro({ navigation }) {
     const [password, setPassword] = useState('');
 
     function signUp() {
-        createUserWithEmailAndPassword(authentication, email, password)
-            .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
-                // ...
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                Alert.alert("Email ou senha incompatíveis")
-            });
+        if (email != "" && password != "") {
+            createUserWithEmailAndPassword(authentication, email, password)
+                .then((userCredential) => {
+                    // Signed in
+                    const user = userCredential.user;
+                    // ...
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    Alert.alert("Email ou senha incompatíveis")
+                });
             navigation.navigate("Login")
+        }
+        else {
+            Alert.alert("Preencha todos os campos!")
+        }
     }
 
     return (
         <View style={styles.container}>
-            <Logo style={styles.logo}/>
+            <Logo style={styles.logo} />
             <Text style={styles.title}>Criar Login Para Professor</Text>
             <TextInput placeholder="Email"
                 style={styles.input}
                 onChangeText={(email) => { setEmail(email) }}
                 keyboardType="email-address" />
-            <TextInput placeholder="password"
+            <TextInput placeholder="Senha"
                 style={styles.input}
                 onChangeText={(password) => { setPassword(password) }}
                 secureTextEntry={true}
                 minLength={6} />
             <TouchableOpacity
-            style={styles.buttonNewTask}
+                style={styles.buttonNewTask}
                 onPress={signUp}>
                 <Text style={styles.button}>Cadastrar</Text>
             </TouchableOpacity>

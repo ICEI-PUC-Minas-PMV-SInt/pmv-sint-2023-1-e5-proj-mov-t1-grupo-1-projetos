@@ -25,7 +25,7 @@ export default function Home({ navigation }) {
                     {/*Botão para cadastrar novo professor*/}
                     <TouchableOpacity
                         style={styles.button1}
-                        onPress={() => navigation.navigate("Cadastro")}>
+                        onPress={() => navigation.navigate("Cadastrar Professor")}>
                         <AntDesign name="addfile" size={24} color="white" />
                         <Text style={styles.button}>Cadastrar Professor</Text>
                     </TouchableOpacity>
@@ -33,7 +33,7 @@ export default function Home({ navigation }) {
                     {/*Botão para cadastrar novo aluno*/}
                     <TouchableOpacity
                         style={styles.button2}
-                        onPress={() => { navigation.navigate("Main") }}>
+                        onPress={() => { navigation.navigate("Cadastrar Educando") }}>
                         <AntDesign name="addfile" size={24} color="white" />
                         <Text style={styles.button}>Cadastrar Educando</Text>
                     </TouchableOpacity>
@@ -43,7 +43,7 @@ export default function Home({ navigation }) {
                     {/*Botão para ver alunos cadastrados*/}
                     <TouchableOpacity
                         style={styles.button3}
-                        onPress={() => { navigation.navigate("DadosEducando") }}>
+                        onPress={() => { navigation.navigate("Educandos Cadastrados") }}>
                         <AntDesign name="folder1" size={24} color="white" />
                         <Text style={styles.button}>Educandos Cadastrados</Text>
                     </TouchableOpacity>
@@ -51,7 +51,7 @@ export default function Home({ navigation }) {
                     {/*Botão para cadastrar nova atividade*/}
                     <TouchableOpacity
                         style={styles.button4}
-                        onPress={() => { navigation.navigate("CadastroAtividade") }}>
+                        onPress={() => { navigation.navigate("Cadastro de Atividade") }}>
                         <AntDesign name="filetext1" size={24} color="white" />
                         <Text style={styles.button}>Cadastrar Atividade</Text>
                     </TouchableOpacity>
@@ -61,7 +61,7 @@ export default function Home({ navigation }) {
                     {/*Botão para ver atividades cadastradas*/}
                     <TouchableOpacity
                         style={styles.button5}
-                        onPress={() => { navigation.navigate("DadosAtividade") }}>
+                        onPress={() => { navigation.navigate("Atividades Cadastradas") }}>
                         <AntDesign name="folder1" size={24} color="white" />
                         <Text style={styles.button}>Atividades Cadastradas</Text>
                     </TouchableOpacity>

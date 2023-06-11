@@ -39,7 +39,6 @@ export default function UpdateAtividade({navigation, route}) {
                 value={nome}
                 onChangeText={(nome) => { setNome(nome) }}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
 
             {/* Descricao*/}
             <TextInput

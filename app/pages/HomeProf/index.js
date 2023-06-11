@@ -27,25 +27,18 @@ export default function HomeProf({ navigation }) {
                 {/*Botão para cadastrar nova turma*/}
                 <TouchableOpacity
                     style={styles.button1}
-                    onPress={() => { navigation.navigate("CadastroTurma") }}>
+                    onPress={() => { navigation.navigate("Cadastrar Turma") }}>
                     <AntDesign name="filetext1" size={24} color="white" />
                     <Text style={styles.button}>Cadastrar Turma</Text>
                 </TouchableOpacity>
                 {/*Botão para ver turmas cadastradas*/}
                 <TouchableOpacity
                     style={styles.button3}
-                    onPress={() => { navigation.navigate("DadosTurma") }}>
+                    onPress={() => { navigation.navigate("Turmas Cadastradas") }}>
                         <AntDesign name="folder1" size={24} color="white" /> 
                     <Text style={styles.button}>Turmas Cadastradas</Text>
                 </TouchableOpacity>
             </View>
-
-            {/*Botão para ver os horários*/}
-            <TouchableOpacity
-                style={styles.buttonNewTask}
-                onPress={() => { navigation.navigate("Horarios") }}>
-                <Text style={styles.button}>Meus Horários</Text>
-            </TouchableOpacity>
 
             {/*Sair*/}
             <TouchableOpacity

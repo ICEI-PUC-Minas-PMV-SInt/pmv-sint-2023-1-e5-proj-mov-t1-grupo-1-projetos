@@ -55,7 +55,9 @@ const styles = StyleSheet.create({
     },
     iconButton: {
         flex: 1,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontWeight: 'bold',
+        color: '#fff',
     }
 })
 

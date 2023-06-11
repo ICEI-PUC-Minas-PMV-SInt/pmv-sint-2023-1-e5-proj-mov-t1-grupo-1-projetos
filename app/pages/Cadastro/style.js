@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         borderRadius: 50,
         color: 'white',
-        fontSize: 16,
+        fontWeight: 'bold',
         textTransform: 'uppercase',
         marginTop: 20
     },

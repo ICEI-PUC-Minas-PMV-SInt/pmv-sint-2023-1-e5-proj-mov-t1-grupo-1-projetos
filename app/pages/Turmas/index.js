@@ -9,8 +9,10 @@ export default function Turmas({ navigation, route }) {
 
     const idTask = route.params.id;
     const [details, setDetails] = useState([])
+    const [alunos, setAlunos] = useState(route.params.alunos)
     const docRef = doc(db, "Turmas", idTask);
-
+    const commaSep = alunos.map(item => item).join(', ');
+    console.log(commaSep)
     useEffect(() => {
         const fetchQuery = async () => {
             const storeData = getDoc(docRef);
@@ -36,7 +38,7 @@ export default function Turmas({ navigation, route }) {
                 <Text style={styles.details}><Text style={styles.datas}>Horário: </Text> {details.horario}</Text>
                 <Text style={styles.details}><Text style={styles.datas}>Dias: </Text> {details.dias}</Text>
                 <Text style={styles.details}><Text style={styles.datas}>Turno: </Text> {details.turno}</Text>
-                <Text style={styles.details}><Text style={styles.datas}>Alunos: </Text> {details.alunos}</Text>
+                <Text style={styles.details}><Text style={styles.datas}>Alunos: </Text> {commaSep}</Text>
                 <Text style={styles.details}><Text style={styles.datas}>Professor: </Text> {details.professor}</Text>
 
                 <View style={styles.container}>
@@ -46,7 +48,7 @@ export default function Turmas({ navigation, route }) {
                 <TouchableOpacity
                     style={styles.buttonNewTask}
                     onPress={() => {
-                        navigation.navigate("UpdateTurma", {
+                        navigation.navigate("Update Turma", {
                             id: idTask,
                             nome: details.nome,
                             descricao: details.descricao,
@@ -54,7 +56,7 @@ export default function Turmas({ navigation, route }) {
                             horario: details.horario,
                             dias: details.dias,
                             turno: details.turno,
-                            alunos: details.alunos,
+                            alunos: alunos,
                             professor: details.professor,
                 
                         })

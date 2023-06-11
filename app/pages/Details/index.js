@@ -70,7 +70,7 @@ export default function Details({ navigation, route }) {
                 <TouchableOpacity
                     style={styles.buttonNewTask}
                     onPress={() => {
-                        navigation.navigate("Update", {
+                        navigation.navigate("Update Dados", {
                             id: idTask,
                             fone: details.fone,
                             nome: details.nome,

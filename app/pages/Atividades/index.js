@@ -40,7 +40,7 @@ export default function Atividades({ navigation, route }) {
                 <TouchableOpacity
                     style={styles.buttonNewTask}
                     onPress={() => {
-                        navigation.navigate("UpdateAtividade", {
+                        navigation.navigate("Update de Atividade", {
                             id: idTask,
                             nome: details.nome,
                             descricao: details.descricao,

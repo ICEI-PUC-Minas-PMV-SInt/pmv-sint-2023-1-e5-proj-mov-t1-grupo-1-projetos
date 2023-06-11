@@ -10,15 +10,15 @@ import { Picker } from '@react-native-picker/picker';
 export default function UpdateTurma({ navigation, route }) {
 
     const idTask = route.params.id;
-    const [nome, setNome] = useState('')
-    const [descricao, setDescricao] = useState('')
-    const [horario, setHorario] = useState('')
-    const [dias, setDias] = useState('')
-    const [turno, setTurno] = useState('')
-    const [professor, setProfessor] = useState('')
+    const [nome, setNome] = useState(route.params.nome)
+    const [descricao, setDescricao] = useState(route.params.descricao)
+    const [horario, setHorario] = useState(route.params.horario)
+    const [dias, setDias] = useState(route.params.dias)
+    const [turno, setTurno] = useState(route.params.turno)
+    const [professor, setProfessor] = useState(route.params.professor)
     const [alunos, setAlunos] = useState([]); // Modificado para um array vazio
     const [nomesAlunos, setNomesAlunos] = useState([]);
-    const [atividadeSelecionada, setAtividadeSelecionada] = useState(null);
+    const [atividadeSelecionada, setAtividadeSelecionada] = useState(route.params.atividadeSelecionada);
     const [nomesAtividades, setNomesAtividades] = useState([]);
 
     useEffect(() => {
@@ -90,7 +90,7 @@ export default function UpdateTurma({ navigation, route }) {
         }).catch((error) => {
             console.log(error);
         })
-        navigation.navigate("Home")
+        navigation.navigate("Home Professor")
     }
 
     return (
@@ -103,7 +103,7 @@ export default function UpdateTurma({ navigation, route }) {
                 placeholder='Nome'
                 onChangeText={(nome) => { setNome(nome) }}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+            
 
             {/* Descricao*/}
             <TextInput
@@ -126,7 +126,7 @@ export default function UpdateTurma({ navigation, route }) {
                         <Picker.Item key={nomeAtividade} label={nomeAtividade} value={nomeAtividade} />
                     ))}
                 </Picker>
-                <Text style={styles.obrigatorio}>*obrigatório</Text>
+                
             </View>
 
             {/* Horario*/}
@@ -135,7 +135,7 @@ export default function UpdateTurma({ navigation, route }) {
                 placeholder='Horário'
                 onChangeText={(horario) => { setHorario(horario) }}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+            
 
 
             {/* Dias*/}
@@ -144,7 +144,7 @@ export default function UpdateTurma({ navigation, route }) {
                 placeholder='Dias'
                 onChangeText={(dias) => { setDias(dias) }}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+            
 
 
             {/* Turno*/}
@@ -153,7 +153,7 @@ export default function UpdateTurma({ navigation, route }) {
                 placeholder='Turno'
                 onChangeText={(turno) => { setTurno(turno) }}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+            
 
 
             {/* Alunos */}

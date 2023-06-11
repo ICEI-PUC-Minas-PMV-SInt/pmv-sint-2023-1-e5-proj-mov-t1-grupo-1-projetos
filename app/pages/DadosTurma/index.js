@@ -105,6 +105,7 @@ export default function DadosTurma({ navigation }) {
                 onPress={() =>
                   navigation.navigate("Turmas", {
                     id: item.id,
+                    alunos: item.alunos
                   })
                 }
               >

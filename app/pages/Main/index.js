@@ -43,46 +43,51 @@ export default function Main({ navigation }) {
 
 
     function addTask() {
-        addDoc(collection(db, "Alunos"), {
-            dataEntrada: dataEntrada,
-            dataSaida: dataSaida,
-            nome: nome,
-            fone: fone,
-            nascimento: nascimento,
-            sexo: sexo,
-            rg: rg,
-            cpf: cpf,
-            certidao: certidao,
-            etnia: etnia,
-            naturalidade: naturalidade,
-            pcd: pcd,
-            irmaos: irmaos,
-            nomeIrmaos: nomeIrmaos,
-            responsavelFin: responsavelFin,
-            qtdMembros: qtdMembros,
-            renda: renda,
-            beco: beco,
-            rua: rua,
-            numero: numero,
-            bairro: bairro,
-            residencia: residencia,
-            escola: escola,
-            anoEscolar: anoEscolar,
-            salaTurma: salaTurma,
-            turno: turno,
-            rgResponsavel: rgResponsavel,
-            cpfResponsavel: cpfResponsavel,
-            ofcMusical: ofcMusical,
-            ofcHumana: ofcHumana,
-            internet: internet,
-            aparelho: aparelho,
-        }).then(() => {
-            //Data saved succesfully
-            Alert.alert('Aluno Cadastrado com sucesso');
-        }).catch((error) => {
-            console.log(error);
-        })
+        if (nome != "" && fone != "" && rg != "" && nascimento != "" && dataEntrada != "" && naturalidade != "") {
+            addDoc(collection(db, "Alunos"), {
+                dataEntrada: dataEntrada,
+                dataSaida: dataSaida,
+                nome: nome,
+                fone: fone,
+                nascimento: nascimento,
+                sexo: sexo,
+                rg: rg,
+                cpf: cpf,
+                certidao: certidao,
+                etnia: etnia,
+                naturalidade: naturalidade,
+                pcd: pcd,
+                irmaos: irmaos,
+                nomeIrmaos: nomeIrmaos,
+                responsavelFin: responsavelFin,
+                qtdMembros: qtdMembros,
+                renda: renda,
+                beco: beco,
+                rua: rua,
+                numero: numero,
+                bairro: bairro,
+                residencia: residencia,
+                escola: escola,
+                anoEscolar: anoEscolar,
+                salaTurma: salaTurma,
+                turno: turno,
+                rgResponsavel: rgResponsavel,
+                cpfResponsavel: cpfResponsavel,
+                ofcMusical: ofcMusical,
+                ofcHumana: ofcHumana,
+                internet: internet,
+                aparelho: aparelho,
+            }).then(() => {
+                //Data saved succesfully
+                Alert.alert('Aluno Cadastrado com sucesso');
+            }).catch((error) => {
+                console.log(error);
+            })
         navigation.navigate("Home")
+        }
+        else {
+            Alert.alert("Preencha todos os campos obrigatórios")
+        }
     }
 
 
@@ -222,7 +227,6 @@ export default function Main({ navigation }) {
                 }}
                 onChangeText={(sexo) => { setSexo(sexo) }}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
 
             {/* RG */}
             <TextInput
@@ -237,6 +241,7 @@ export default function Main({ navigation }) {
                 keyboardType="numeric"
                 onChangeText={(rg) => { setRg(rg) }}
             />
+            <Text style={styles.obrigatorio}>*obrigatório</Text>
 
 
             {/* CPF */}
@@ -253,7 +258,6 @@ export default function Main({ navigation }) {
                 onChangeText={(cpf) => { setCpf(cpf) }}
                 render={(props) => <TextInputMask {...props} type={'cpf'} />}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
 
             {/* certidao */}
             <TextInput
@@ -281,7 +285,7 @@ export default function Main({ navigation }) {
                 }}
                 onChangeText={(etnia) => { setEtnia(etnia) }}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+
 
             {/* Naturalidade */}
             <TextInput
@@ -340,7 +344,7 @@ export default function Main({ navigation }) {
                     />
                 )}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+
 
 
             {/* Nome dos Irmãos*/}

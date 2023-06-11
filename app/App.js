@@ -35,7 +35,7 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name="Cadastro"
+          name="Cadastrar Professor"
           component={Cadastro}
           options={{
             headerTintColor: '#F79031'
@@ -56,42 +56,42 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name="DadosEducando"
+          name="Educandos Cadastrados"
           component={DadosEducando}
           options={{
             headerTintColor: '#F79031'
           }}
         />
         <Stack.Screen
-          name="Main"
+          name="Cadastrar Educando"
           component={Main}
           options={{
             headerTintColor: '#F79031'
           }}
         />
         <Stack.Screen
-          name="Details"
+          name="Detalhes"
           component={Details}
           options={{
             headerTintColor: '#F79031'
           }}
         />
         <Stack.Screen
-          name="Update"
+          name="Update Dados"
           component={Update}
           options={{
             headerTintColor: '#F79031'
           }}
         />
         <Stack.Screen
-          name="CadastroAtividade"
+          name="Cadastro de Atividade"
           component={CadastroAtividade}
           options={{
             headerTintColor: '#F79031'
           }}
         />
         <Stack.Screen
-          name="DadosAtividade"
+          name="Atividades Cadastradas"
           component={DadosAtividade}
           options={{
             headerTintColor: '#F79031'
@@ -105,14 +105,14 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name="UpdateAtividade"
+          name="Update de Atividade"
           component={UpdateAtividade}
           options={{
             headerTintColor: '#F79031'
           }}
         />
         <Stack.Screen
-          name="CadastroTurma"
+          name="Cadastrar Turma"
           component={CadastroTurma}
           options={{
             headerTintColor: '#F79031'
@@ -126,14 +126,14 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name="UpdateTurma"
+          name="Update Turma"
           component={UpdateTurma}
           options={{
             headerTintColor: '#F79031'
           }}
         />
         <Stack.Screen
-          name="DadosTurma"
+          name="Turmas Cadastradas"
           component={DadosTurma}
           options={{
             headerTintColor: '#F79031'

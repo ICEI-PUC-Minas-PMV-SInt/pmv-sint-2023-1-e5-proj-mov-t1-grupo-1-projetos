@@ -55,7 +55,18 @@ const styles = StyleSheet.create({
     },
     iconButton: {
         flex: 1,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontWeight: 'bold',
+        color: '#fff',
+    },
+    listaAlunos: {
+        marginLeft: 20,
+        fontSize: 14
+    },
+    removerAluno: {
+        marginBottom: 10,
+        color: 'red',
+        fontSize: 12
     }
 })
 

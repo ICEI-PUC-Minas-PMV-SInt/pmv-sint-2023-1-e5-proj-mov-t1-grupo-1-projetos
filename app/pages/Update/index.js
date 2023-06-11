@@ -98,6 +98,12 @@ export default function Update({navigation, route}) {
                 placeholder={'dd/mm/aaaa'}
                 keyboardType="numeric"
                 value={dataEntrada}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(dataEntrada) => { setDataEntrada(dataEntrada) }}
                 render={(props) => (
                     <TextInputMask
@@ -109,7 +115,7 @@ export default function Update({navigation, route}) {
                     />
                 )}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+           
 
             {/* Data de Saida */}
             <TextInput
@@ -118,6 +124,12 @@ export default function Update({navigation, route}) {
                 placeholder={'dd/mm/aaaa'}
                 keyboardType="numeric"
                 value={dataSaida}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(dataSaida) => { setDataSaida(dataSaida) }}
                 render={(props) => (
                     <TextInputMask
@@ -135,9 +147,15 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 placeholder='Nome'
                 value={nome}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(nome) => { setNome(nome) }}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+           
 
             {/* Fone */}
             <TextInput
@@ -146,6 +164,12 @@ export default function Update({navigation, route}) {
                 placeholder={'(99) 9999-9999 ou (99) 99999-9999'}
                 keyboardType="numeric"
                 value={fone}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(fone) => { setFone(fone) }}
                 render={(props) => (
                     <TextInputMask
@@ -159,7 +183,7 @@ export default function Update({navigation, route}) {
                     />
                 )}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+           
 
             {/* Nascimento */}
             <TextInput
@@ -168,6 +192,12 @@ export default function Update({navigation, route}) {
                 placeholder={'dd/mm/aaaa'}
                 keyboardType="numeric"
                 value={nascimento}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(nascimento) => { setNascimento(nascimento) }}
                 render={(props) => (
                     <TextInputMask
@@ -179,22 +209,34 @@ export default function Update({navigation, route}) {
                     />
                 )}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+           
 
             {/* Sexo */}
             <TextInput
                 style={styles.input}
                 value={sexo}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 placeholder='Sexo'
                 onChangeText={(sexo) => { setSexo(sexo) }}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+           
 
             {/* RG */}
             <TextInput
                 style={styles.input}
                 placeholder='RG'
                 value={rg}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 keyboardType="numeric"
                 onChangeText={(rg) => { setRg(rg) }}
             />
@@ -205,17 +247,29 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 placeholder='CPF'
                 value={cpf}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 keyboardType="numeric"
                 onChangeText={(cpf) => { setCpf(cpf) }}
                 render={(props) => <TextInputMask {...props} type={'cpf'} />}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+           
 
             {/* certidao */}
             <TextInput
                 style={styles.input}
                 placeholder='Certidão de Nascimento'
                 value={certidao}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 keyboardType="numeric"
                 onChangeText={(certidao) => { setCertidao(certidao) }}
             />
@@ -225,23 +279,41 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 placeholder='Etnia/Cor'
                 value={etnia}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(etnia) => { setEtnia(etnia) }}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+           
 
             {/* Naturalidade */}
             <TextInput
                 style={styles.input}
                 placeholder='Naturalidade'
                 value={naturalidade}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(naturalidade) => { setNaturalidade(naturalidade) }}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+           
 
             {/* PCD */}
             <TextInput
                 label="Pessoa com Deficência?"
                 style={styles.input}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(pcd) => { setPcd(pcd) }}
                 render={(props) => (
                     <Checkbox.Item
@@ -260,6 +332,12 @@ export default function Update({navigation, route}) {
             <TextInput
                 label="Possui Irmãos Membros do Instituto?"
                 style={styles.input2}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(irmaos) => { setIrmaos(irmaos) }}
                 render={(props) => (
                     <Checkbox.Item
@@ -269,7 +347,7 @@ export default function Update({navigation, route}) {
                     />
                 )}
             />
-            <Text style={styles.obrigatorio}>*obrigatório</Text>
+           
 
 
             {/* Nome dos Irmãos*/}
@@ -277,6 +355,12 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 label='Nome dos Irmãos Membros'
                 value={nomeIrmaos}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(nomeIrmaos) => { setNomeIrmaos(nomeIrmaos) }}
             />
 
@@ -285,6 +369,12 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 label='Principal Responável Finaceiro'
                 value={responsavelFin}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(responsavelFin) => { setResponsavelFin(responsavelFin) }}
             />
 
@@ -293,6 +383,12 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 label='Quantidade de Membros'
                 value={qtdMembros}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 keyboardType="numeric"
                 placeholder={'Incluindo o Educando'}
                 onChangeText={(qtdMembros) => { setQtdMembros(qtdMembros) }}
@@ -305,6 +401,12 @@ export default function Update({navigation, route}) {
                 keyboardType="numeric"
                 placeholder={'Per Capita'}
                 value={renda}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(renda) => { setRenda(renda) }}
                 render={(props) => (
                     <TextInputMask
@@ -328,6 +430,12 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 label="Rua"
                 value={rua}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(rua) => { setRua(rua) }}
             />
 
@@ -335,6 +443,12 @@ export default function Update({navigation, route}) {
             <TextInput
                 style={styles.input}
                 label="Beco"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(beco) => { setBeco(beco) }}
             />
 
@@ -344,6 +458,12 @@ export default function Update({navigation, route}) {
                 label="Número"
                 keyboardType="numeric"
                 value={numero}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(numero) => { setNumero(numero) }}
             />
 
@@ -352,6 +472,12 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 label="Bairro"
                 value={bairro}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(bairro) => { setBairro(bairro) }}
             />
 
@@ -360,6 +486,12 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 label="Tipo de Residência "
                 value={residencia}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(residencia) => { setResidencia(residencia) }}
                 placeholder={'Alugada / Própria / Cedida / Outros'}
             />
@@ -374,6 +506,12 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 label="Nome da Escola"
                 value={escola}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(escola) => { setEscola(escola) }}
             />
 
@@ -382,6 +520,12 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 label="Ano Escolar"
                 value={anoEscolar}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(anoEscolar) => { setAnoEscolar(anoEscolar) }}
             />
 
@@ -390,6 +534,12 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 label="Sala/Turma"
                 value={salaTurma}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(salaTurma) => { setSalaTurma(salaTurma) }}
             />
 
@@ -398,6 +548,12 @@ export default function Update({navigation, route}) {
                 style={styles.input}
                 label="Turno"
                 value={turno}
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(turno) => { setTurno(turno) }}
             />
 
@@ -411,6 +567,12 @@ export default function Update({navigation, route}) {
                 label="RG"
                 value={rgResponsavel}
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(rgResponsavel) => { setRgResponsavel(rgResponsavel) }}
             />
 
@@ -420,6 +582,12 @@ export default function Update({navigation, route}) {
                 label="CPF"
                 value={cpfResponsavel}
                 keyboardType="numeric"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(cpfResponsavel) => { setCpfResponsavel(cpfResponsavel) }}
                 render={(props) => <TextInputMask {...props} type={'cpf'} />}
             />
@@ -433,6 +601,12 @@ export default function Update({navigation, route}) {
             <TextInput
                 style={styles.input}
                 label="Oficina Musical"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(ofcMusical) => { setOfcMusical(ofcMusical) }}
                 render={(props) => (
                     <Checkbox.Item
@@ -447,6 +621,12 @@ export default function Update({navigation, route}) {
             <TextInput
                 style={styles.input}
                 label="Oficina de Formação Humana"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(ofcHumana) => { setOfcHumana(ofcMusical) }}
                 render={(props) => (
                     <Checkbox.Item
@@ -464,6 +644,12 @@ export default function Update({navigation, route}) {
             <TextInput
                 style={styles.input}
                 label="Internet"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(internet) => { setInternet(internet) }}
                 render={(props) => (
                     <Checkbox.Item
@@ -478,6 +664,12 @@ export default function Update({navigation, route}) {
             <TextInput
                 style={styles.input}
                 label="Dispositivo para Aulas Online"
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(aparelho) => { setAparelho(aparelho) }}
                 render={(props) => (
                     <Checkbox.Item

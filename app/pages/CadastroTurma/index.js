@@ -73,6 +73,7 @@ export default function CadastroTurma({ navigation }) {
     };
 
     function addTask() {
+        if(nome != "" && descricao != "" && horario != "" && dias != "" && turno != "" && professor != ""){
         addDoc(collection(db, "Turmas"), {
             nome: nome,
             descricao: descricao,
@@ -90,7 +91,10 @@ export default function CadastroTurma({ navigation }) {
         }).catch((error) => {
             console.log(error);
         })
-        navigation.navigate("Home")
+        navigation.navigate("Home Professor")}
+        else {
+            Alert.alert("Preencha todos os dados obrigatórios!")
+        }
     }
 
     return (
@@ -101,6 +105,12 @@ export default function CadastroTurma({ navigation }) {
             <TextInput
                 style={styles.input}
                 placeholder='Nome'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(nome) => { setNome(nome) }}
             />
             <Text style={styles.obrigatorio}>*obrigatório</Text>
@@ -109,8 +119,15 @@ export default function CadastroTurma({ navigation }) {
             <TextInput
                 style={styles.input}
                 placeholder='Descrição'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(descricao) => { setDescricao(descricao) }}
             />
+            <Text style={styles.obrigatorio}>*obrigatório</Text>
 
             {/* Atividade */}
             <View style={styles.atividadeContainer}>
@@ -133,6 +150,12 @@ export default function CadastroTurma({ navigation }) {
             <TextInput
                 style={styles.input}
                 placeholder='Horário'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(horario) => { setHorario(horario) }}
             />
             <Text style={styles.obrigatorio}>*obrigatório</Text>
@@ -142,6 +165,12 @@ export default function CadastroTurma({ navigation }) {
             <TextInput
                 style={styles.input}
                 placeholder='Dias'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(dias) => { setDias(dias) }}
             />
             <Text style={styles.obrigatorio}>*obrigatório</Text>
@@ -151,6 +180,12 @@ export default function CadastroTurma({ navigation }) {
             <TextInput
                 style={styles.input}
                 placeholder='Turno'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(turno) => { setTurno(turno) }}
             />
             <Text style={styles.obrigatorio}>*obrigatório</Text>
@@ -187,8 +222,15 @@ export default function CadastroTurma({ navigation }) {
             <TextInput
                 style={styles.input}
                 placeholder='Professor'
+                theme={{
+                    colors: {
+                        placeholder: 'grey', text: 'black', primary: '#FF5E5E',
+                        underlineColor: 'transparent', background: '#003489',
+                    }
+                }}
                 onChangeText={(professor) => { setProfessor(professor) }}
             />
+            <Text style={styles.obrigatorio}>*obrigatório</Text>
 
             <TouchableOpacity
                 style={styles.buttonNext}

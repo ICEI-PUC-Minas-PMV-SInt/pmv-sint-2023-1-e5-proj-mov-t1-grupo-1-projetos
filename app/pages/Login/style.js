@@ -20,7 +20,16 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 16,
         textTransform: 'uppercase',
-        marginTop: 20
+        marginTop: 20,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
     },
     input: {
         marginLeft: 10,
@@ -28,7 +37,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         padding: 10,
         height: 50,
-        backgroundColor:'#fff',
+        backgroundColor: '#fff',
         fontSize: 17,
         textAlign: 'center',
         borderColor: '#E7E7E7',
