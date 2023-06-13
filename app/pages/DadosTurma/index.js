@@ -75,8 +75,7 @@ export default function DadosTurma({ navigation }) {
           style={styles.searchArea}
           placeholder="Pesquisar uma Turma"
           placeholderTextColor="#888"
-          value={search}
-          onChangeText={(t) => setSearch(t)}
+          onChangeText={(search) => setSearch(search)}
         />
 
       </View>

@@ -51,8 +51,9 @@ const styles = StyleSheet.create({
         textDecorationLine: 'underline',
         textDecorationStyle: 'solid',
         alignItems: 'flex-end',
-        paddingRight: 10
-    },
+        paddingRight: 10,
+        width: 150 
+        },
     link: {
         fontSize: 15,
         marginTop: 1,
@@ -65,6 +66,7 @@ const styles = StyleSheet.create({
     },
     row: {
         width: '90%',
+        alignItems: 'flex-end'
     }
 })
 

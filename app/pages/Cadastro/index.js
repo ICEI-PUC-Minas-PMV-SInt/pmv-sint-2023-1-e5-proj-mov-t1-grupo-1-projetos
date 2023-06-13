@@ -26,7 +26,7 @@ export default function Cadastro({ navigation }) {
                     const errorMessage = error.message;
                     Alert.alert("Email ou senha incompatíveis")
                 });
-            navigation.navigate("Login")
+            navigation.navigate("Home")
         }
         else {
             Alert.alert("Preencha todos os campos!")
@@ -39,6 +39,7 @@ export default function Cadastro({ navigation }) {
             <Text style={styles.title}>Criar Login Para Professor</Text>
             <TextInput placeholder="Email"
                 style={styles.input}
+                autoCapitalize='none'
                 onChangeText={(email) => { setEmail(email) }}
                 keyboardType="email-address" />
             <TextInput placeholder="Senha"

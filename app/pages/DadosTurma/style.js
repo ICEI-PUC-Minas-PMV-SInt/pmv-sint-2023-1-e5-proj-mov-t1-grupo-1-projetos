@@ -50,6 +50,12 @@ const styles = StyleSheet.create({
         paddingLeft: 20
 
     },
+    searchArea: {
+        marginLeft: 15,
+        paddingTop: 10,
+        paddingBottom: 10,
+        fontSize: 15
+    },
     contextAllTasks: {
 
     }

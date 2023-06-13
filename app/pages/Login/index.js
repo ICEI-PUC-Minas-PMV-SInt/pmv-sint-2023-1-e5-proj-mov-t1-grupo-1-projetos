@@ -33,7 +33,7 @@ export default function Login({ navigation }) {
         signInWithEmailAndPassword(authentication, email, password)
             .then((userCredential) => {
                 // Signed in
-                if (email == 'admin@admin.com') {
+                if (email == 'admin@admin.com' || email == 'projeto.ong.g1@gmail.com') {
                     navigation.navigate("Home")
                 } else {
                     console.log("Login feito com sucesso")
