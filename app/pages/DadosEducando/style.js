@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         paddingTop: 20,
 
     },
-    Tasks : {
+    Tasks: {
         width: '100%',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -50,8 +50,18 @@ const styles = StyleSheet.create({
         paddingLeft: 20
 
     },
-    contextAllTasks: {
-
+    searchArea: {
+        marginLeft: 20,
+        marginBottom: 10,
+        fontSize: 15
+    },
+    search: {
+        width: '90%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 5,
+        marginBottom: 10,
+        fontSize: 18
     }
 })
 

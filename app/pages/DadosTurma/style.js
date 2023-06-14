@@ -51,13 +51,18 @@ const styles = StyleSheet.create({
 
     },
     searchArea: {
-        marginLeft: 15,
+        marginLeft: 20,
         paddingTop: 10,
         paddingBottom: 10,
         fontSize: 15
     },
-    contextAllTasks: {
-
+    search: {
+        width: '90%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 5,
+        marginBottom: 10,
+        fontSize: 18
     }
 })
 

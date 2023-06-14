@@ -46,6 +46,7 @@ export default function Login({ navigation }) {
             })
             .catch((error) => {
                 Alert.alert("Senha e/ou email incorretos")
+                setVisible(false);
             });
 
     }

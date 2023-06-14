@@ -62,9 +62,19 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 15,
         textTransform: 'uppercase',
+    }, 
+    searchArea: {
+        marginLeft: 20,
+        marginBottom: 10,
+        fontSize: 15
     },
-    contextAllTasks: {
-
+    search: {
+        width: '90%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 5,
+        marginBottom: 10,
+        fontSize: 18
     }
 })
 

@@ -38,7 +38,6 @@ export default function DadosTurma({ navigation }) {
   //carregar toda vez que carreagar os elementos
   const userRef = collection(db, "Turmas");
 
-  //procura por usuário
   useEffect(() => {
     setVisible(true);
     if (search === '') {
@@ -48,22 +47,28 @@ export default function DadosTurma({ navigation }) {
           list.push({ ...doc.data(), id: doc.id })
         })
         setTask(list);
-        setVisible(false);
       })
     } else {
-      setTask(
-        getDocs(query(userRef, where("nome", "==", search))).then(docSnap => {
-          let list = [];
-          docSnap.forEach((doc) => {
-            list.push({ ...doc.data(), id: doc.id })
-          })
-          setTask(list);
-          setVisible(false);
-        }
-        )
-      )
+
     }
-  }, [search])
+    setVisible(false);
+  })
+
+   //procura por usuário
+  function handleSearch() {
+    setVisible(true);
+    setTask(
+      getDocs(query(userRef, where("nome", "==", search))).then(docSnap => {
+        let list = [];
+        docSnap.forEach((doc) => {
+          list.push({ ...doc.data(), id: doc.id })
+        })
+        setTask(list);
+        setVisible(false);
+      }
+      )
+    ), [search]
+  }
 
 
   //delete data
@@ -78,11 +83,21 @@ export default function DadosTurma({ navigation }) {
       <View style={styles.search}>
         <TextInput
           style={styles.searchArea}
-          placeholder="Pesquisar uma Turma"
+          placeholder="Pesquisar Aluno (nome completo)"
           placeholderTextColor="#888"
-          onChangeText={(search) => setSearch(search)}
+          value={search}
+          onChangeText={(t) => setSearch(t)}
         />
 
+        <TouchableOpacity
+          onPress={() => { handleSearch() }}
+        >
+          <FontAwesome
+            name="search"
+            size={23}
+            color="orange"
+          ></FontAwesome>
+        </TouchableOpacity>
       </View>
       <FlatList
         showsVerticalScrollIndicator={false}
