@@ -6,12 +6,13 @@ import { authentication } from "../../components/config";
 import styles from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Logo from "../../components/Logo";
-
+import Loading from "../../components/Loading";
 
 export default function Login({ navigation }) {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [visible, setVisible] = useState(false);
 
 
     //change Password
@@ -30,14 +31,17 @@ export default function Login({ navigation }) {
 
 
     function signIn() {
+        setVisible(true);
         signInWithEmailAndPassword(authentication, email, password)
             .then((userCredential) => {
                 // Signed in
                 if (email == 'admin@admin.com' || email == 'projeto.ong.g1@gmail.com') {
                     navigation.navigate("Home")
+                    setVisible(false);
                 } else {
                     console.log("Login feito com sucesso")
                     navigation.navigate("Home Professor")
+                    setVisible(false);
                 }
             })
             .catch((error) => {
@@ -48,6 +52,7 @@ export default function Login({ navigation }) {
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
+            <Loading visible={visible}/>
             <Logo style={styles.logo}/>
             <Text style={styles.title}>Login</Text>
             {/*Input Email*/}

@@ -4,9 +4,12 @@ import React, { useState } from 'react'
 import { db } from '../../components/config'
 import styles from './style'
 import { TextInputMask } from 'react-native-masked-text'
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, getDocs, where, query } from "firebase/firestore";
+import Loading from '../../components/Loading'
 
 export default function Main({ navigation }) {
+
+    const [visible, setVisible] = useState(false);
 
     const [dataEntrada, setDataEntrada] = useState('')
     const [dataSaida, setDataSaida] = useState('')
@@ -44,6 +47,7 @@ export default function Main({ navigation }) {
 
     function addTask() {
         if (nome != "" && fone != "" && rg != "" && nascimento != "" && dataEntrada != "" && naturalidade != "") {
+            setVisible(true);
             addDoc(collection(db, "Alunos"), {
                 dataEntrada: dataEntrada,
                 dataSaida: dataSaida,
@@ -80,10 +84,11 @@ export default function Main({ navigation }) {
             }).then(() => {
                 //Data saved succesfully
                 Alert.alert('Aluno Cadastrado com sucesso');
+                setVisible(false);
             }).catch((error) => {
                 console.log(error);
             })
-        navigation.navigate("Home")
+            navigation.navigate("Home")
         }
         else {
             Alert.alert("Preencha todos os campos obrigatórios")
@@ -97,11 +102,11 @@ export default function Main({ navigation }) {
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.label}>Formulário do Educando</Text>
-
+            <Loading visible={visible} />
             {/* Nome*/}
             <TextInput
                 style={styles.input}
-                placeholder='Nome'
+                placeholder='Nome Completo'
                 onChangeText={(nome) => { setNome(nome) }}
                 theme={{
                     colors: {

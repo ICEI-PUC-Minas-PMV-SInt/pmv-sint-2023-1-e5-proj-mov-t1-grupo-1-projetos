@@ -5,12 +5,13 @@ import styles from "./style"
 import { doc, collection, getDocs, deleteDoc, orderBy, where, query } from 'firebase/firestore';
 import { FontAwesome } from "@expo/vector-icons";
 import { TextInput } from "react-native-gesture-handler";
-
+import Loading from "../../components/Loading";
 
 export default function DadosAtividade({ navigation }) {
   //state que vai receber as nossas tasks quando carregar
   const [task, setTask] = useState('')
   const [search, setSearch] = useState("");
+  const [visible, setVisible] = useState(false);
 
   const showConfirmDialog = (id) => {
     return Alert.alert(
@@ -38,6 +39,7 @@ export default function DadosAtividade({ navigation }) {
 
   //procura por usuário
   useEffect(() => {
+    setVisible(true);
     if (search === '') {
       getDocs(query(userRef, orderBy("nome"))).then(docSnap => {
         let list = [];
@@ -45,6 +47,7 @@ export default function DadosAtividade({ navigation }) {
           list.push({ ...doc.data(), id: doc.id })
         })
         setTask(list);
+        setVisible(false);
       })
     } else {
       setTask(
@@ -54,6 +57,7 @@ export default function DadosAtividade({ navigation }) {
             list.push({ ...doc.data(), id: doc.id })
           })
           setTask(list);
+          setVisible(false);
         }
         )
       )
@@ -63,11 +67,12 @@ export default function DadosAtividade({ navigation }) {
   //delete data
   function deleteTask(id) {
     deleteDoc(doc(db, "Atividades", id));
+    navigation.navigate("Home")
   }
 
   return (
     <View style={styles.container}>
-
+      <Loading visible={visible} />
       <View style={styles.search}>
         <TextInput
           style={styles.searchArea}

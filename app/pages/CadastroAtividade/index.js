@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { db } from '../../components/config'
 import styles from './style'
 import { addDoc, collection } from "firebase/firestore";
+import Loading from '../../components/Loading'
 
 export default function CadastroAtividade({ navigation }) {
 
@@ -11,16 +12,18 @@ export default function CadastroAtividade({ navigation }) {
     const [nome, setNome] = useState('')
     const [descricao, setDescricao] = useState('')
 
-
+    const [visible, setVisible] = useState(false);
 
     function addTask() {
         if (nome != "" && descricao != "") {
+            setVisible(true);
             addDoc(collection(db, "Atividades"), {
                 nome: nome,
                 descricao: descricao,
             }).then(() => {
                 //Data saved succesfully
                 Alert.alert('Atividade Cadastrada com sucesso');
+                setVisible(false);
             }).catch((error) => {
                 console.log(error);
             })
@@ -35,7 +38,7 @@ export default function CadastroAtividade({ navigation }) {
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.label}>Formulário da Atividade</Text>
-
+            <Loading visible={visible} />
             {/* Nome*/}
             <TextInput
                 style={styles.input}

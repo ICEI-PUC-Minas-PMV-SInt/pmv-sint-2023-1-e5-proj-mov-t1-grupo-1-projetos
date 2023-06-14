@@ -58,6 +58,19 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: 'bold',
         color: '#fff',
+    },
+    alunoContainer: {
+        marginLeft: 20,
+    },
+    removerAluno: {
+        fontSize: 14, 
+        color: 'red',
+        marginLeft: 5,
+        marginTop: 0,
+        marginBottom: 15
+    },
+    alunoNome: {
+        fontSize: 16
     }
 })
 

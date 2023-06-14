@@ -4,6 +4,7 @@ import { db } from "../../components/config";
 import styles from "./style"
 import { doc, collection, getDocs, deleteDoc, getDoc, query } from 'firebase/firestore';
 import { FontAwesome } from "@expo/vector-icons";
+import Loading from "../../components/Loading";
 
 export default function Details({ navigation, route }) {
 
@@ -11,12 +12,16 @@ export default function Details({ navigation, route }) {
     const [details, setDetails] = useState([])
     const docRef = doc(db, "Alunos", idTask);
 
+    const [visible, setVisible] = useState(false);
+
     useEffect(() => {
+        setVisible(true);
         const fetchQuery = async () => {
             const storeData = getDoc(docRef);
 
             if (storeData) {
                 setDetails((await storeData).data());
+                setVisible(false);
             } else {
 
             }
@@ -29,6 +34,7 @@ export default function Details({ navigation, route }) {
     return (
         <ScrollView style={styles.container}>
             <View style={styles.container}>
+                <Loading visible={visible} />
                 {/*Mostrar dados dos alunos*/}
                 <Text style={styles.label}>Dados do Aluno</Text>
                 <Text style={styles.details}><Text style={styles.datas}>Nome:</Text> {details.nome}</Text>

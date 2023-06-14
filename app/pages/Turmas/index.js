@@ -4,6 +4,7 @@ import { db } from "../../components/config";
 import styles from "./style";
 import { doc, getDoc } from 'firebase/firestore';
 import { FontAwesome } from "@expo/vector-icons";
+import Loading from "../../components/Loading";
 
 export default function Turmas({ navigation, route }) {
 
@@ -12,13 +13,17 @@ export default function Turmas({ navigation, route }) {
     const [alunos, setAlunos] = useState(route.params.alunos)
     const docRef = doc(db, "Turmas", idTask);
     const commaSep = alunos.map(item => item).join(', ');
-    console.log(commaSep)
+
+    const [visible, setVisible] = useState(false);
+
     useEffect(() => {
+        setVisible(true);
         const fetchQuery = async () => {
             const storeData = getDoc(docRef);
 
             if (storeData) {
                 setDetails((await storeData).data());
+                setVisible(false);
             } else {
 
             }
@@ -30,6 +35,7 @@ export default function Turmas({ navigation, route }) {
     return (
         <ScrollView style={styles.container}>
             <View style={styles.container}>
+                <Loading visible={visible} />
                 {/*Mostrar dados dos alunos*/}
                 <Text style={styles.label}>Dados da Turma</Text>
                 <Text style={styles.details}><Text style={styles.datas}>Nome:</Text> {details.nome}</Text>
@@ -58,7 +64,7 @@ export default function Turmas({ navigation, route }) {
                             turno: details.turno,
                             alunos: alunos,
                             professor: details.professor,
-                
+
                         })
                     }}>
                     <Text style={styles.iconButton}>Editar Cadastro da Turma</Text>

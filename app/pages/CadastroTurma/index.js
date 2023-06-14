@@ -5,10 +5,12 @@ import { db } from '../../components/config'
 import styles from './style'
 import { addDoc, collection } from "firebase/firestore";
 import { Picker } from '@react-native-picker/picker';
-import { getDocs} from 'firebase/firestore';
+import { getDocs } from 'firebase/firestore';
+import Loading from '../../components/Loading'
 
 export default function CadastroTurma({ navigation }) {
 
+    const [visible, setVisible] = useState(false);
 
     const [nome, setNome] = useState('')
     const [descricao, setDescricao] = useState('')
@@ -73,25 +75,28 @@ export default function CadastroTurma({ navigation }) {
     };
 
     function addTask() {
-        if(nome != "" && descricao != "" && horario != "" && dias != "" && turno != "" && professor != ""){
-        addDoc(collection(db, "Turmas"), {
-            nome: nome,
-            descricao: descricao,
-            atividadeSelecionada: atividadeSelecionada,
-            horario: horario,
-            dias: dias,
-            turno: turno,
-            alunos: alunos,
-            professor: professor,
+        if (nome != "" && descricao != "" && horario != "" && dias != "" && turno != "" && professor != "") {
+            setVisible(true);
+            addDoc(collection(db, "Turmas"), {
+                nome: nome,
+                descricao: descricao,
+                atividadeSelecionada: atividadeSelecionada,
+                horario: horario,
+                dias: dias,
+                turno: turno,
+                alunos: alunos,
+                professor: professor,
 
 
-        }).then(() => {
-            //Data saved succesfully
-            Alert.alert('Turma Cadastrada com sucesso');
-        }).catch((error) => {
-            console.log(error);
-        })
-        navigation.navigate("Home Professor")}
+            }).then(() => {
+                //Data saved succesfully
+                Alert.alert('Turma Cadastrada com sucesso');
+                setVisible(false);
+            }).catch((error) => {
+                console.log(error);
+            })
+            navigation.navigate("Home Professor")
+        }
         else {
             Alert.alert("Preencha todos os dados obrigatórios!")
         }
@@ -100,7 +105,7 @@ export default function CadastroTurma({ navigation }) {
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.label}>Formulário da Turma</Text>
-
+            <Loading visible={visible} />
             {/* Nome*/}
             <TextInput
                 style={styles.input}

@@ -4,19 +4,23 @@ import { db } from "../../components/config";
 import styles from "./style"
 import { doc, collection, getDocs, deleteDoc, getDoc, query } from 'firebase/firestore';
 import { FontAwesome } from "@expo/vector-icons";
+import Loading from "../../components/Loading";
 
 export default function Atividades({ navigation, route }) {
 
     const idTask = route.params.id;
     const [details, setDetails] = useState([])
     const docRef = doc(db, "Atividades", idTask);
+    const [visible, setVisible] = useState(false);
 
     useEffect(() => {
+        setVisible(true);
         const fetchQuery = async () => {
             const storeData = getDoc(docRef);
 
             if (storeData) {
                 setDetails((await storeData).data());
+                setVisible(false);
             } else {
 
             }
@@ -28,6 +32,7 @@ export default function Atividades({ navigation, route }) {
     return (
         <ScrollView style={styles.container}>
             <View style={styles.container}>
+                <Loading visible={visible} />
                 {/*Mostrar dados das atividades*/}
                 <Text style={styles.label}>Dados da Atividade</Text>
                 <Text style={styles.details}><Text style={styles.datas}>Nome:</Text> {details.nome}</Text>
