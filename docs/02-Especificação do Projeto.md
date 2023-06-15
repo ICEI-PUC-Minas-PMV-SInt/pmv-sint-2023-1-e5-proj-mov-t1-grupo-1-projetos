@@ -144,13 +144,13 @@ Modelo de criação da Agenda de Aulas. Para a melhoria do processo é proposto 
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-000| Permitir que o usuário realize login | ALTA | 
+|RF-000| Permitir que o usuário realize login/logout no sistema | ALTA | 
 |RF-001| Permitir que o usuário cadastre novos membros | ALTA | 
 |RF-002| Permitir que o usuário edite o cadastro de membros já existentes   | MÉDIA |
 |RF-003| Permitir que o usuário visualize os cadastros existentes   | MÉDIA |
-|RF-004| Permitir que o usuário cadastre novas classes | ALTA | 
-|RF-005| Permitir que o usuário edite o cadastro de classes já existentes   | MÉDIA |
-|RF-006| Permitir que o usuário visualize as classes existentes   | MÉDIA |
+|RF-004| Permitir que o usuário cadastre, vizualize e edite novas atividades | MÉDIA | 
+|RF-005| Permitir que o usuário cadastre novos professores   | ALTA |
+|RF-006| Permitir que o usuário(professor) cadastre, vizualize e edite as classes   | ALTA |
 
 ### Requisitos não Funcionais
 
