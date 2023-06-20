@@ -12,14 +12,14 @@ O Programa cresceu e transformou-se em um Instituto. Mantendo o mesmo desejo ini
 
 As principais frentes de ação do IAV são a promoção da formação de crianças e adolescentes para atuarem como agentes multiplicadores em suas famílias e comunidades e o incentivo à participação e ao engajamento comunitário. 
 
-Após reuniões realizadas com o Instituto verificou-se algumas problemáticas a serem solucionadas por meio do desenvolvimento de uma aplicação mobile. Um dos principais problemas a nível de organização do Instituto é o cadastramento de novos membros. Atualmente todo o processo é feito por meio de excel o que dificulta na organização e na facilidade do preenchimento de todos os campos necessários. Além disso, outro problema discutido foi a organização das aulas e dos horários de cada professor relacionado com sua determinada aula. 
+Após reuniões realizadas com o Instituto verificou-se algumas problemáticas a serem solucionadas por meio do desenvolvimento de uma aplicação mobile. Um dos principais problemas a nível de organização do Instituto é o cadastramento de novos membros. Atualmente todo o processo é feito por meio de excel o que dificulta na organização e na facilidade do preenchimento de todos os campos necessários. Além disso, outro problema discutido foi a organização das aulas e dos horários de cada professor relacionado com sua determinada turma. 
 
-Para solucionar as questões apresentadas pelo Instituto foi estabelecido o projeto de desenvolvimento de uma aplicação mobile a ser utilizada pelos administradores e funcionários do Instituto para realizar o cadastramento de novos membros de forma simples e intuitiva. Outra funcionalidade a ser implementada é a possibilidade de organizar um cronograma com todas as aulas realizadas pelo instituto com seu respectivo horário, dia, professor  e alunos matriculados solucionando assim as problemáticas apresentadas.
+Para solucionar as questões apresentadas pelo Instituto foi estabelecido o projeto de desenvolvimento de uma aplicação mobile a ser utilizada pelos administradores e funcionários do Instituto para realizar o cadastramento de novos membros de forma simples e intuitiva. Outra funcionalidade a ser implementada é a possibilidade de organizar as atividades realizadas pelo instituto com seu respectivo horário, dia, professor e alunos matriculados solucionando assim as problemáticas apresentadas.
 
 
 ## Problema
 
-Atualmente, os membros do Instituto Árvore da Vida deparam-se com a dificuldade em organizar e realizar o cadastro dos novos possíveis usuários dos serviços aos quais disponibiliza para a comunidade ao qual está inserida. Além disso, a organização das aulas disponíveis e dos horários de cada professor são igualmente problematizados.
+Atualmente, os membros do Instituto Árvore da Vida deparam-se com a dificuldade em organizar e realizar o cadastro dos novos possíveis usuários dos serviços aos quais disponibiliza para a comunidade ao qual está inserida. Além disso, a organização das atividades disponíveis e dos horários de cada professor são igualmente problematizados.
 
 ## Objetivos
 
@@ -30,7 +30,7 @@ Tem como objetivo específico:
 Permitir o cadastro de novos membros de forma simplificada para o usuário;
 Permitir que o usuário edite o cadastro de membros já existentes;
 Permitir que o usuário visualize e organize as aulas que estão sendo disponibilizadas pelo instituto, seus horários e que alunos estão cadastrados;
-Permitir  que o usuário visualize e organize os horários e as respectivas aulas dos professores do instituto.
+Permitir  que o usuário visualize e organize as atividades do instituto.
 
 
 ## Justificativa
