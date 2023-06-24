@@ -6,7 +6,7 @@ import styles from './style'
 import { TextInputMask } from 'react-native-masked-text'
 import { addDoc, collection, getDocs, where, query } from "firebase/firestore";
 import Loading from '../../components/Loading'
-import { validate } from '../utils/dataValidation'
+import { onlyLettersAndSpaces, dateValid } from '../../utils/validation'
 
 
 export default function Main({ navigation }) {
@@ -45,56 +45,68 @@ export default function Main({ navigation }) {
     const [ofcHumana, setOfcHumana] = useState('')
     const [internet, setInternet] = useState('')
     const [aparelho, setAparelho] = useState('')
-    const dataEntradaValidação = validate(dataEntrada);
-    const dataSaidaValidação = validate(dataSaida);
-    const dataNascimentoValidação = validate(nascimento);
+    
 
     function addTask() {
-        if (nome != "" && fone != "" && rg != "" && nascimento != "" && dataEntrada != "" 
-           && naturalidade != "" && dataEntradaValidação && dataSaidaValidação  
-           && dataNascimentoValidação) {
-             setVisible(true);
-            addDoc(collection(db, "Alunos"), {
-                dataEntrada: dataEntrada,
-                dataSaida: dataSaida,
-                nome: nome,
-                fone: fone,
-                nascimento: nascimento,
-                sexo: sexo,
-                rg: rg,
-                cpf: cpf,
-                certidao: certidao,
-                etnia: etnia,
-                naturalidade: naturalidade,
-                pcd: pcd,
-                irmaos: irmaos,
-                nomeIrmaos: nomeIrmaos,
-                responsavelFin: responsavelFin,
-                qtdMembros: qtdMembros,
-                renda: renda,
-                beco: beco,
-                rua: rua,
-                numero: numero,
-                bairro: bairro,
-                residencia: residencia,
-                escola: escola,
-                anoEscolar: anoEscolar,
-                salaTurma: salaTurma,
-                turno: turno,
-                rgResponsavel: rgResponsavel,
-                cpfResponsavel: cpfResponsavel,
-                ofcMusical: ofcMusical,
-                ofcHumana: ofcHumana,
-                internet: internet,
-                aparelho: aparelho,
-            }).then(() => {
-                //Data saved succesfully
-                Alert.alert('Aluno Cadastrado com sucesso');
-                setVisible(false);
-            }).catch((error) => {
-                console.log(error);
-            })
-            navigation.navigate("Home")
+        if (nome != "" && fone != "" && rg != "" && nascimento != "" && dataEntrada != "" && naturalidade != "") {
+            const nomeValidacao = onlyLettersAndSpaces(nome);
+            const naturalidadeValidacao = onlyLettersAndSpaces(naturalidade);
+            const dataEntradaValidação = dateValid(dataEntrada);
+            const dataSaidaValidação = dateValid(dataSaida);
+            const dataNascimentoValidação = dateValid(nascimento);
+            if (nomeValidacao && naturalidadeValidacao && dataEntradaValidação && dataSaidaValidação && dataNascimentoValidação) {
+                setVisible(true);
+                addDoc(collection(db, "Alunos"), {
+                    dataEntrada: dataEntrada,
+                    dataSaida: dataSaida,
+                    nome: nome,
+                    fone: fone,
+                    nascimento: nascimento,
+                    sexo: sexo,
+                    rg: rg,
+                    cpf: cpf,
+                    certidao: certidao,
+                    etnia: etnia,
+                    naturalidade: naturalidade,
+                    pcd: pcd,
+                    irmaos: irmaos,
+                    nomeIrmaos: nomeIrmaos,
+                    responsavelFin: responsavelFin,
+                    qtdMembros: qtdMembros,
+                    renda: renda,
+                    beco: beco,
+                    rua: rua,
+                    numero: numero,
+                    bairro: bairro,
+                    residencia: residencia,
+                    escola: escola,
+                    anoEscolar: anoEscolar,
+                    salaTurma: salaTurma,
+                    turno: turno,
+                    rgResponsavel: rgResponsavel,
+                    cpfResponsavel: cpfResponsavel,
+                    ofcMusical: ofcMusical,
+                    ofcHumana: ofcHumana,
+                    internet: internet,
+                    aparelho: aparelho,
+                }).then(() => {
+                    //Data saved succesfully
+                    Alert.alert('Aluno Cadastrado com sucesso');
+                    setVisible(false);
+                }).catch((error) => {
+                    console.log(error);
+                })
+                navigation.navigate("Home")
+            }
+            else {
+                if (!nomeValidacao || !naturalidadeValidacao) {
+                    const campoInvalido = nomeValidacao ? "Naturalidade" : "Nome";
+                    const mensagem = `${campoInvalido} deve receber apenas letras!`;
+                    return Alert.alert(mensagem);
+                }
+
+                Alert.alert("Data incorreta! Verifique as datas de entrada, saída ou nascimento!")
+            }
         }
         else {
             Alert.alert("Preencha todos os campos obrigatórios")
