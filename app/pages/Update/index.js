@@ -5,6 +5,8 @@ import { db } from '../../components/config'
 import styles from './style'
 import { TextInputMask } from 'react-native-masked-text'
 import { collection, updateDoc, doc } from "firebase/firestore";
+import { validate } from '../utils/dataValidation'
+
 
 export default function Update({navigation, route}) {
 
@@ -41,10 +43,14 @@ export default function Update({navigation, route}) {
     const [ofcHumana, setOfcHumana] = useState(route.params.ofcHumana)
     const [internet, setInternet] = useState(route.params.internet)
     const [aparelho, setAparelho] = useState(route.params.aparelho)
+    const dataEntradaValidação = validate(dataEntrada);
+    const dataSaidaValidação = validate(dataSaida);
+    const dataNascimentoValidação = validate(nascimento);
 
     function updateUser() {
       const userRef = doc(db, "Alunos", idTask)
       console.log(idTask)
+      if (dataEntradaValidação && dataSaidaValidação && dataNascimentoValidação ){
       updateDoc(userRef, {
           dataEntrada: dataEntrada,
           dataSaida: dataSaida,
@@ -85,8 +91,12 @@ export default function Update({navigation, route}) {
           console.log(error);
       })
       navigation.navigate("Home")
-  }
+    }else {
+    Alert.alert('Datas inválidas')
+}
 
+
+ }
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.label}>Formulário do Educando</Text>

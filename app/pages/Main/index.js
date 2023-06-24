@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, ScrollView, Alert } from 'react-native'
+import { View, Text, TouchableOpacity, ScrollView, Alert} from 'react-native'
 import { TextInput, Checkbox } from 'react-native-paper'
 import React, { useState } from 'react'
 import { db } from '../../components/config'
@@ -6,6 +6,8 @@ import styles from './style'
 import { TextInputMask } from 'react-native-masked-text'
 import { addDoc, collection, getDocs, where, query } from "firebase/firestore";
 import Loading from '../../components/Loading'
+import { validate } from '../utils/dataValidation'
+
 
 export default function Main({ navigation }) {
 
@@ -43,11 +45,15 @@ export default function Main({ navigation }) {
     const [ofcHumana, setOfcHumana] = useState('')
     const [internet, setInternet] = useState('')
     const [aparelho, setAparelho] = useState('')
-
+    const dataEntradaValidação = validate(dataEntrada);
+    const dataSaidaValidação = validate(dataSaida);
+    const dataNascimentoValidação = validate(nascimento);
 
     function addTask() {
-        if (nome != "" && fone != "" && rg != "" && nascimento != "" && dataEntrada != "" && naturalidade != "") {
-            setVisible(true);
+        if (nome != "" && fone != "" && rg != "" && nascimento != "" && dataEntrada != "" 
+           && naturalidade != "" && dataEntradaValidação && dataSaidaValidação  
+           && dataNascimentoValidação) {
+             setVisible(true);
             addDoc(collection(db, "Alunos"), {
                 dataEntrada: dataEntrada,
                 dataSaida: dataSaida,
@@ -92,11 +98,9 @@ export default function Main({ navigation }) {
         }
         else {
             Alert.alert("Preencha todos os campos obrigatórios")
+           
         }
     }
-
-
-
 
 
     return (
@@ -118,8 +122,8 @@ export default function Main({ navigation }) {
             <Text style={styles.obrigatorio}>*obrigatório</Text>
 
 
-            {/* Data de Entrada */}
-            <TextInput
+           {/* Data de Entrada */}
+           <TextInput
                 label="Data de Entrada"
                 style={styles.input}
                 placeholder={'dd/mm/aaaa'}
@@ -143,6 +147,7 @@ export default function Main({ navigation }) {
             />
             <Text style={styles.obrigatorio}>*obrigatório</Text>
 
+
             {/* Data de Saida */}
             <TextInput
                 label="Data de Saida"
@@ -165,8 +170,8 @@ export default function Main({ navigation }) {
                         }}
                     />
                 )}
-            />
-
+            /> 
+            <Text style={styles.obrigatorio}>*obrigatório</Text>
 
             {/* Fone */}
             <TextInput
