@@ -5,7 +5,7 @@ import { db } from '../../components/config'
 import styles from './style'
 import { TextInputMask } from 'react-native-masked-text'
 import { collection, updateDoc, doc } from "firebase/firestore";
-import { validate } from '../utils/dataValidation'
+import { onlyLettersAndSpaces, dateValid } from '../../utils/validation'
 
 
 export default function Update({navigation, route}) {
@@ -43,60 +43,67 @@ export default function Update({navigation, route}) {
     const [ofcHumana, setOfcHumana] = useState(route.params.ofcHumana)
     const [internet, setInternet] = useState(route.params.internet)
     const [aparelho, setAparelho] = useState(route.params.aparelho)
-    const dataEntradaValidação = validate(dataEntrada);
-    const dataSaidaValidação = validate(dataSaida);
-    const dataNascimentoValidação = validate(nascimento);
 
     function updateUser() {
-      const userRef = doc(db, "Alunos", idTask)
-      console.log(idTask)
-      if (dataEntradaValidação && dataSaidaValidação && dataNascimentoValidação ){
-      updateDoc(userRef, {
-          dataEntrada: dataEntrada,
-          dataSaida: dataSaida,
-          nome: nome,
-          fone: fone,
-          nascimento: nascimento,
-          sexo: sexo,
-          rg: rg,
-          cpf: cpf,
-          certidao: certidao,
-          etnia: etnia,
-          naturalidade: naturalidade,
-          pcd: pcd,
-          irmaos: irmaos,
-          nomeIrmaos: nomeIrmaos,
-          responsavelFin: responsavelFin,
-          qtdMembros: qtdMembros,
-          renda: renda,
-          beco: beco,
-          rua: rua,
-          numero: numero,
-          bairro: bairro,
-          residencia: residencia,
-          escola: escola,
-          anoEscolar: anoEscolar,
-          salaTurma: salaTurma,
-          turno: turno,
-          rgResponsavel: rgResponsavel,
-          cpfResponsavel: cpfResponsavel,
-          ofcMusical: ofcMusical,
-          ofcHumana: ofcHumana,
-          internet: internet,
-          aparelho: aparelho,
-      }).then(() => {
-          //Data saved succesfully
-          Alert.alert('Aluno atualizado com sucesso');
-      }).catch((error) => {
-          console.log(error);
-      })
-      navigation.navigate("Home")
-    }else {
-    Alert.alert('Datas inválidas')
-}
+        const userRef = doc(db, "Alunos", idTask)
+        console.log(idTask)
+        const nomeValidacao = onlyLettersAndSpaces(nome);
+        const naturalidadeValidacao = onlyLettersAndSpaces(naturalidade);
+        const dataEntradaValidação = dateValid(dataEntrada);
+        const dataSaidaValidação = dateValid(dataSaida);
+        const dataNascimentoValidação = dateValid(nascimento);
+        if (nomeValidacao && naturalidadeValidacao && dataEntradaValidação && dataSaidaValidação && dataNascimentoValidação ){
+            updateDoc(userRef, {
+                dataEntrada: dataEntrada,
+                dataSaida: dataSaida,
+                nome: nome,
+                fone: fone,
+                nascimento: nascimento,
+                sexo: sexo,
+                rg: rg,
+                cpf: cpf,
+                certidao: certidao,
+                etnia: etnia,
+                naturalidade: naturalidade,
+                pcd: pcd,
+                irmaos: irmaos,
+                nomeIrmaos: nomeIrmaos,
+                responsavelFin: responsavelFin,
+                qtdMembros: qtdMembros,
+                renda: renda,
+                beco: beco,
+                rua: rua,
+                numero: numero,
+                bairro: bairro,
+                residencia: residencia,
+                escola: escola,
+                anoEscolar: anoEscolar,
+                salaTurma: salaTurma,
+                turno: turno,
+                rgResponsavel: rgResponsavel,
+                cpfResponsavel: cpfResponsavel,
+                ofcMusical: ofcMusical,
+                ofcHumana: ofcHumana,
+                internet: internet,
+                aparelho: aparelho,
+            }).then(() => {
+                //Data saved succesfully
+                Alert.alert('Aluno atualizado com sucesso');
+            }).catch((error) => {
+                console.log(error);
+            })
+                navigation.navigate("Home")
+        }
+        else {
+            if (!nomeValidacao || !naturalidadeValidacao) {
+                const campoInvalido = nomeValidacao ? "Naturalidade" : "Nome";
+                const mensagem = `${campoInvalido} deve receber apenas letras!`;
+                return Alert.alert(mensagem);
+            }
+            Alert.alert('Datas inválidas')
+        }
+    }
 
-
- }
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.label}>Formulário do Educando</Text>
