@@ -37,6 +37,8 @@ Os testes serão feitos com:
 				<li>Na tela inicial, selecionar a opção "Logout"</li>
 			</ul>
 		</td>
+		<td>
+		 <li><a href= "11-Registro de Testes de Usabilidade.md">Registro de testes <a/></li>
 		<td/>
 	</tr>
 	<tr>
